@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Guerric Le Bihan's portfolio (Dev & Cybersecurity Engineer)">
+   <title>Guerric Le Bihan</title>
+   <!-- Favicon (generation with realfavicongenerator.net) -->
+   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+   <link rel="manifest" href="site.webmanifest">
+   <link rel="mask-icon" href="safari-pinned-tab.svg" color="#8e97e5">
+   <meta name="apple-mobile-web-app-title" content="Guerric Le Bihan">
+   <meta name="application-name" content="Guerric Le Bihan">
+   <meta name="msapplication-TileColor" content="#2d89ef">
+   <meta name="theme-color" content="#8e97e5">
+
+   <!-- Css Management -->
+   <link rel="stylesheet" href="css/norm.css"> <!-- normalize items between navigators -->
+   <link rel="stylesheet" id="theme" href="css/dark.css"> <!-- give theme variables -->
+   <link rel="stylesheet" href="css/common.css"> <!-- Do css job -->
+</head>
+
+<body class="flex center">
+   <div id="blur"></div> <!-- Gets blurry when invocking a popup -->
+   <div class="flex column center" id="main-box"> <!-- center horizontally -->
+      <div id="main"> <!-- center vertically -->
+         <div class="flex space" id="header">
+            <div class="flex column space"> <!-- Left -->
+               <div class="important" id="title">Guerric Le Bihan</div>
+               <div class="flex space" id="contact">
+                  <a>Email</a>
+                  <a>LinkedIn</a>
+                  <a>Download CV</a>
+               </div>
+            </div>
+            <div class="flex column space end"> <!-- Right -->
+               <a href="https://www.guerriclebihan.fr">switch to french</a>
+               <a class="desactivated" id="theme-button"><img src="img/dark.png"></a>
+            </div>
+         </div>
+         <div id="about">
+            <div class="important" id="about-title">About Me</div>
+            <div id="about-text">
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+               ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+               mollit anim id est laborum
+               <br><br>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+               ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+               mollit anim id est laborum
+            </div>
+         </div>
+         <div class="flex column space" id="content-box">
+            <div class="flex column space center" id="menu">
+               <div class="important">My Portfolio</div>
+               <div class="flex space" id="choices">
+                  <a class="selected">All</a>
+                  <a>CI/CD</a>
+                  <a>SysAdmin</a>
+                  <a>Cloud</a>
+                  <a>DevSecOps</a>
+                  <a>Audit</a>
+                  <a>Pentesting</a>
+               </div>
+            </div>
+            <div id="content"></div>
+         </div>
+      </div>
+   </div>
+   <div id="popup"></div>
+</body>
+
+</html>

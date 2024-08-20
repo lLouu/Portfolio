@@ -1,0 +1,9 @@
+:root {
+   --inv: rgba(0, 0, 0, 0);
+   --blur: rgba(255, 255, 255, 0.65);
+   --bg: #E0E3FF;
+   --bg-bis: #FFFFFF;
+   --text: #000000;
+   --sub-text: #525760;
+   --important: #5263FF;
+}

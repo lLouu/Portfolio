@@ -1,0 +1,78 @@
+body {
+   min-height: 100vh;
+   background-color: var(--bg);
+   color: var(--text);
+}
+
+a {
+   color: var(--sub-text);
+   text-decoration: none;
+   font-style: italic;
+}
+
+#main-box {
+   min-width: 100vw;
+}
+
+#main {
+   padding: 2.5vh 2.5vw 2.5vh 2.5vw;
+   max-width: 1000px;
+}
+
+#contact>a {
+   margin-right: 10px;
+}
+
+#choices>a {
+   margin-right: 25px;
+   padding-top: 5px;
+   font-style: normal;
+}
+
+#about,
+#content-box,
+#content {
+   margin-top: 40px;
+}
+
+#about-text,
+#choices {
+   margin-top: 10px;
+}
+
+
+.selected {
+   background-color: var(--important);
+   border-radius: 10px;
+   width: 70px;
+   height: 25px;
+   color: var(--bg);
+   text-align: center;
+   font-weight: bolder;
+}
+
+.important {
+   color: var(--important);
+   font-size: large;
+   font-weight: bolder;
+}
+
+.flex {
+   display: flex;
+}
+
+.column {
+   flex-direction: column;
+}
+
+.end {
+   align-items: self-end;
+}
+
+.center {
+   align-items: center;
+}
+
+.space {
+   justify-content: space-around;
+}

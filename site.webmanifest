@@ -1,0 +1,14 @@
+{
+    "name": "Guerric Le Bihan",
+    "short_name": "Guerric Le Bihan",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#8e97e5",
+    "background_color": "#8e97e5",
+    "display": "standalone"
+}
