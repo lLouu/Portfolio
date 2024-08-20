@@ -27,18 +27,21 @@
    <div id="blur"></div> <!-- Gets blurry when invocking a popup -->
    <div class="flex column center" id="main-box"> <!-- center horizontally -->
       <div id="main"> <!-- center vertically -->
-         <div class="flex space" id="header">
-            <div class="flex column space"> <!-- Left -->
+         <div class="flex between" id="header">
+            <div class="flex column between"> <!-- Left -->
                <div class="important" id="title">Guerric Le Bihan</div>
-               <div class="flex space" id="contact">
+               <div class="flex between" id="contact">
                   <a>Email</a>
                   <a>LinkedIn</a>
                   <a>Download CV</a>
                </div>
             </div>
-            <div class="flex column space end"> <!-- Right -->
+            <div class="flex column between end"> <!-- Right -->
                <a href="https://www.guerriclebihan.fr">switch to french</a>
-               <a class="desactivated" id="theme-button"><img src="img/dark.png"></a>
+               <a class="flex between" id="theme-button">
+                  <img class="theme-selected" src="img/dark.png" height="16x16">
+                  <img src="img/light.png" height="16x16">
+               </a>
             </div>
          </div>
          <div id="about">

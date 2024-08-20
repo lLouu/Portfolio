@@ -40,6 +40,26 @@ a {
    margin-top: 10px;
 }
 
+#header {
+   height: 45px;
+}
+
+#theme-button {
+   /* padding: 3px 15px 3px 15px; */
+   border-radius: 10px;
+   width: 50px;
+   background-color: var(--bg-bis);
+}
+
+#theme-button>img {
+   padding: 3px 5px 3px 5px;
+}
+
+.theme-selected {
+   border-radius: 10px;
+   background-color: var(--important);
+}
+
 
 .selected {
    background-color: var(--important);
@@ -75,4 +95,8 @@ a {
 
 .space {
    justify-content: space-around;
+}
+
+.between {
+   justify-content: space-between;
 }
