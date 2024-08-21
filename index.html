@@ -21,6 +21,10 @@
    <link rel="stylesheet" href="css/norm.css"> <!-- normalize items between navigators -->
    <link rel="stylesheet" id="theme" href="css/dark.css"> <!-- give theme variables -->
    <link rel="stylesheet" href="css/common.css"> <!-- Do css job -->
+
+   <!-- Js integration -->
+   <script src="js/data.js"></script>
+   <script src="js/script.js"></script>
 </head>
 
 <body class="flex center">
@@ -38,7 +42,7 @@
             </div>
             <div class="flex column between end"> <!-- Right -->
                <a href="https://www.guerriclebihan.fr">switch to french</a>
-               <a class="flex between" id="theme-button">
+               <a class="flex between" id="theme-button" onclick="changetheme()">
                   <img class="theme-selected" src="img/dark.png" height="16x16">
                   <img src="img/light.png" height="16x16">
                </a>
