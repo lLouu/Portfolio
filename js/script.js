@@ -1,14 +1,21 @@
-let is_dark = 1;
 const changetheme = () => {
-   if (is_dark == 1) {
-      is_dark = 0;
+   if (window.localStorage.getItem('theme') == 'dark') {
+      window.localStorage.setItem('theme', 'light');
+   } else {
+      window.localStorage.setItem('theme', 'dark');
+   }
+
+   updatetheme();
+}
+
+const updatetheme = () => {
+   if (window.localStorage.getItem('theme') == 'light') {
       document.getElementById("theme").href = "css/light.css";
       let button = document.getElementById("theme-button");
       button.children[0].classList = "" // dark img
       button.children[1].classList = "theme-selected" // light img
 
    } else {
-      is_dark = 1;
       document.getElementById("theme").href = "css/dark.css";
       let button = document.getElementById("theme-button");
       button.children[0].classList = "theme-selected"; // dark img
@@ -16,13 +23,16 @@ const changetheme = () => {
    }
 }
 
-let choice = "all"
 const changechoice = (new_choice) => {
-   if (choice == new_choice) { return; }
-   document.getElementById(choice).setAttribute('class', '');
-   choice = new_choice;
-   document.getElementById(choice).setAttribute('class', 'selected');
+   if (window.sessionStorage.getItem('choice') == new_choice) { return; }
+   window.sessionStorage.setItem('choice', new_choice);
+   updatechoicemenu();
    load_vignettes();
+}
+
+const updatechoicemenu = () => {
+   document.getElementsByClassName('selected')[0].setAttribute('class', '');
+   document.getElementById(window.sessionStorage.getItem('choice')).setAttribute('class', 'selected');
 }
 
 let n_vignette = 0;
@@ -68,14 +78,14 @@ const clear_vignettes = () => {
 const load_vignettes = () => {
    clear_vignettes();
    for (let i = 0; i < content.length; i++) {
-      if (choice == 'all' || content[i].filters.includes(choice)) {
+      if (window.sessionStorage.getItem('choice') == 'all' || content[i].filters.includes(window.sessionStorage.getItem('choice'))) {
          createvignette(content[i].title, content[i].type, content[i].img, i);
       }
    }
 }
 
 const gen_popup = (ind) => {
-   document.getElementById("popup-content").innerHTML = content[ind].content[choice];
+   document.getElementById("popup-content").innerHTML = content[ind].content[window.sessionStorage.getItem('choice')];
    if (undefined == document.getElementById("popup-content").innerHTML) {
       document.getElementById("popup-content").innerHTML = content[ind].content['all'];
    }
@@ -91,6 +101,10 @@ const withdraw_popup = () => {
 
 window.onload = () => {
    while (null == content) { }
+   if (null == window.localStorage.getItem('theme')) { window.localStorage.setItem('theme', 'dark'); }
+   updatetheme();
+   if (null == window.sessionStorage.getItem('choice')) { window.sessionStorage.setItem('choice', 'all'); }
+   updatechoicemenu();
    load_vignettes();
 }
 

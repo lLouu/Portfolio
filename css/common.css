@@ -14,7 +14,7 @@ a {
 
 #main-box {
    width: calc(100vw - 16.5px);
-   margin-top: 5vh;
+   margin-top: 10vh;
    margin-bottom: 5vh;
 }
 
@@ -37,7 +37,7 @@ a {
 #about,
 #content-box,
 #content {
-   margin-top: 40px;
+   margin-top: 7.5vh;
 }
 
 #about-text,
@@ -47,6 +47,20 @@ a {
 
 #header {
    height: 45px;
+}
+
+#header,
+#menu {
+   position: sticky;
+   top: 0;
+   padding-top: 2vh;
+   padding-bottom: 2vh;
+   background-color: var(--bg);
+   border-bottom: 0.2px solid var(--bg-bis);
+}
+
+#menu {
+   top: calc(45px + 4vh);
 }
 
 #theme-button {
