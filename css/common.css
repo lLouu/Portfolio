@@ -29,6 +29,7 @@ a {
    margin-right: 25px;
    padding-top: 5px;
    font-style: normal;
+   height: 25px;
 }
 
 #about,
@@ -65,8 +66,7 @@ a {
 .selected {
    background-color: var(--important);
    border-radius: 10px;
-   width: 70px;
-   height: 25px;
+   padding: 0 12.5px 0 12.5px;
    color: var(--bg);
    text-align: center;
    font-weight: bolder;

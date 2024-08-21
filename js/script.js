@@ -15,3 +15,11 @@ const changetheme = () => {
       button.children[1].classList = "" // light img
    }
 }
+
+let choice = "all"
+const changechoice = (new_choice) => {
+   if (choice == new_choice) { return; }
+   document.getElementById(choice).setAttribute('class', '');
+   choice = new_choice
+   document.getElementById(choice).setAttribute('class', 'selected');
+}
