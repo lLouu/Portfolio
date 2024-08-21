@@ -28,7 +28,6 @@
 </head>
 
 <body class="flex center">
-   <div id="blur"></div> <!-- Gets blurry when invocking a popup -->
    <div class="flex column center" id="main-box"> <!-- center horizontally -->
       <div id="main"> <!-- center vertically -->
          <div class="flex between" id="header">
@@ -85,7 +84,14 @@
          </div>
       </div>
    </div>
-   <div id="popup"></div>
+   <div id="popup" class="flex center">
+      <div id="popup-container" class="flex column center">
+         <div id="popup-bg">
+            <a id="popup-back" onclick="withdraw_popup()">← Back</a>
+            <div id="popup-content"></div>
+         </div>
+      </div>
+   </div>
 </body>
 
 </html>

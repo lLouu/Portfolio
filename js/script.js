@@ -60,7 +60,14 @@ const clear_vignettes = () => {
 }
 
 const gen_popup = (title) => {
-   alert(title);
+   let popup = document.getElementById("popup");
+   document.body.style.overflow = 'hidden';
+   popup.setAttribute('style', `top: ${window.scrollY}px; display: flex;`)
+}
+
+const withdraw_popup = () => {
+   document.body.style.overflow = 'auto';
+   document.getElementById("popup").style.display = "none";
 }
 
 window.onload = () => {
