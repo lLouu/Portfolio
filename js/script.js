@@ -26,7 +26,8 @@ const changechoice = (new_choice) => {
 
 let n_vignette = 0;
 let line_number = 3;
-const createvignette = (title, img) => {
+// Type being either certification, project, study or account
+const createvignette = (title, type, img) => {
    let content_container = document.getElementById("content");
    if (n_vignette % line_number == 0) {
       // Create new line container
@@ -44,9 +45,12 @@ const createvignette = (title, img) => {
    let title_ele = document.createElement('div');
    title_ele.innerHTML = title;
    vignette.appendChild(title_ele);
+   let type_ele = document.createElement('div');
+   type_ele.innerHTML = type;
+   type_ele.classList = "vignette-type";
+   vignette.appendChild(type_ele);
    let see_more = document.createElement('a');
    see_more.innerHTML = "See more →";
-   see_more.classList = "important";
    see_more.setAttribute('onclick', `gen_popup("${title}");`);
    vignette.appendChild(see_more);
    line.appendChild(vignette);
@@ -71,22 +75,22 @@ const withdraw_popup = () => {
 }
 
 window.onload = () => {
-   createvignette("Test A");
-   createvignette("Test B");
-   createvignette("Test C");
-   createvignette("Test D");
-   createvignette("Test E");
-   createvignette("Test F");
-   createvignette("Test G");
-   createvignette("Test H");
+   createvignette("Test A", "certification");
+   createvignette("Test B", "certification");
+   createvignette("Test C", "certification");
+   createvignette("Test D", "certification");
+   createvignette("Test E", "certification");
+   createvignette("Test F", "certification");
+   createvignette("Test G", "certification");
+   createvignette("Test H", "certification");
    clear_vignettes();
-   createvignette("Test I");
-   createvignette("Test J");
-   createvignette("Test K");
-   createvignette("Test L");
-   createvignette("Test M");
-   createvignette("Test N");
-   createvignette("Test O");
-   createvignette("Test P");
+   createvignette("Test I", "certification");
+   createvignette("Test J", "certification");
+   createvignette("Test K", "certification");
+   createvignette("Test L", "certification");
+   createvignette("Test M", "certification");
+   createvignette("Test N", "certification");
+   createvignette("Test O", "certification");
+   createvignette("Test P", "certification");
 }
 
