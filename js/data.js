@@ -4,84 +4,108 @@ let content = [
       "type": "job",
       "img": "onepoint.png",
       "filters": ["sysadmin", "ci/cd", "audit", "cloud"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "Junior Analyst",
       "type": "job",
       "img": "onepoint_editis.png",
       "filters": ["audit"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "Junior DevSecOps",
       "type": "job",
       "img": "alstom.png",
       "filters": ["devsecops", "ci/cd", "sysadmin"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "Building a full Information System",
       "type": "project",
       "img": "master_project.png",
       "filters": ["devsecops", "ci/cd", "sysadmin", "audit"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "PenEnv - Bash Pentesting scripts",
       "type": "project",
       "img": "penenv.png",
       "filters": ["devsecops", "pentesting"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "Portfolio",
       "type": "project",
       "img": "portfolio.png",
       "filters": ["devsecops", "ci/cd"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "EFREI Paris",
       "type": "study",
       "img": "efrei.png",
       "filters": ["sysadmin", "devsecops", "audit"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "GCP Digital Leader",
       "type": "certification",
       "img": "digital_leader.png",
       "filters": ["sysadmin", "cloud"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "AWS Solution Architect Associate",
       "type": "study",
       "img": "aws_saa.png",
       "filters": ["sysadmin", "cloud"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "AZ-104",
       "type": "study",
       "img": "az305.png",
       "filters": ["sysadmin", "cloud"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "PNPT",
       "type": "study",
       "img": "pnpt.png",
       "filters": ["pentesting"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "ISO 27005/27001",
       "type": "study",
       "img": "iso2700X.png",
       "filters": ["audit"],
-      "content": "ok"
+      "content": {
+         "all": "ok"
+      }
    },
    {
       "title": "My Github",

@@ -75,7 +75,10 @@ const load_vignettes = () => {
 }
 
 const gen_popup = (ind) => {
-   document.getElementById("popup-content").innerHTML = content[ind].content;
+   document.getElementById("popup-content").innerHTML = content[ind].content[choice];
+   if (undefined == document.getElementById("popup-content").innerHTML) {
+      document.getElementById("popup-content").innerHTML = content[ind].content['all'];
+   }
    let popup = document.getElementById("popup");
    document.body.style.overflow = 'hidden';
    popup.setAttribute('style', `top: ${window.scrollY}px; display: flex;`)
