@@ -11,8 +11,8 @@ const changetheme = () => {
       is_dark = 1;
       document.getElementById("theme").href = "css/dark.css";
       let button = document.getElementById("theme-button");
-      button.children[0].classList = "theme-selected" // dark img
-      button.children[1].classList = "" // light img
+      button.children[0].classList = "theme-selected"; // dark img
+      button.children[1].classList = ""; // light img
    }
 }
 
@@ -20,14 +20,15 @@ let choice = "all"
 const changechoice = (new_choice) => {
    if (choice == new_choice) { return; }
    document.getElementById(choice).setAttribute('class', '');
-   choice = new_choice
+   choice = new_choice;
    document.getElementById(choice).setAttribute('class', 'selected');
+   load_vignettes();
 }
 
 let n_vignette = 0;
 let line_number = 3;
 // Type being either certification, project, study or account
-const createvignette = (title, type, img) => {
+const createvignette = (title, type, img, ind) => {
    let content_container = document.getElementById("content");
    if (n_vignette % line_number == 0) {
       // Create new line container
@@ -40,7 +41,7 @@ const createvignette = (title, type, img) => {
    vignette.classList = "vignette";
    let illustration = document.createElement('img');
    illustration.classList = "illustration";
-   illustration.href = "img";
+   illustration.href = `img/${img}`;
    vignette.appendChild(illustration);
    let title_ele = document.createElement('div');
    title_ele.innerHTML = title;
@@ -51,7 +52,7 @@ const createvignette = (title, type, img) => {
    vignette.appendChild(type_ele);
    let see_more = document.createElement('a');
    see_more.innerHTML = "See more →";
-   see_more.setAttribute('onclick', `gen_popup("${title}");`);
+   see_more.setAttribute('onclick', `gen_popup("${ind}");`);
    vignette.appendChild(see_more);
    line.appendChild(vignette);
    n_vignette += 1;
@@ -63,7 +64,17 @@ const clear_vignettes = () => {
    n_vignette = 0;
 }
 
-const gen_popup = (title) => {
+const load_vignettes = () => {
+   clear_vignettes();
+   for (let i = 0; i < content.length; i++) {
+      if (choice == 'all' || content[i].filters.includes(choice)) {
+         createvignette(content[i].title, content[i].type, content[i].img, i);
+      }
+   }
+}
+
+const gen_popup = (ind) => {
+   document.getElementById("popup-content").innerHTML = content[ind].content;
    let popup = document.getElementById("popup");
    document.body.style.overflow = 'hidden';
    popup.setAttribute('style', `top: ${window.scrollY}px; display: flex;`)
@@ -75,22 +86,7 @@ const withdraw_popup = () => {
 }
 
 window.onload = () => {
-   createvignette("Test A", "certification");
-   createvignette("Test B", "certification");
-   createvignette("Test C", "certification");
-   createvignette("Test D", "certification");
-   createvignette("Test E", "certification");
-   createvignette("Test F", "certification");
-   createvignette("Test G", "certification");
-   createvignette("Test H", "certification");
-   clear_vignettes();
-   createvignette("Test I", "certification");
-   createvignette("Test J", "certification");
-   createvignette("Test K", "certification");
-   createvignette("Test L", "certification");
-   createvignette("Test M", "certification");
-   createvignette("Test N", "certification");
-   createvignette("Test O", "certification");
-   createvignette("Test P", "certification");
+   while (null == content) { }
+   load_vignettes();
 }
 
