@@ -38,7 +38,7 @@ const createvignette = (title, type, img, ind) => {
    }
    let line = content_container.lastChild;
    let vignette = document.createElement('div');
-   vignette.classList = "vignette";
+   vignette.classList = "vignette flex column between";
    let illustration = document.createElement('img');
    illustration.classList = "illustration";
    illustration.href = `img/${img}`;
@@ -52,7 +52,8 @@ const createvignette = (title, type, img, ind) => {
    vignette.appendChild(type_ele);
    let see_more = document.createElement('a');
    see_more.innerHTML = "See more →";
-   see_more.setAttribute('onclick', `gen_popup("${ind}");`);
+   if (type == 'account') { see_more.href = content[ind].links; see_more.target = "_blank"; }
+   else { see_more.setAttribute('onclick', `gen_popup("${ind}");`); }
    vignette.appendChild(see_more);
    line.appendChild(vignette);
    n_vignette += 1;
