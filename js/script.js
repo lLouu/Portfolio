@@ -79,6 +79,10 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const load_vignettes = () => {
    let content_container = document.getElementById("content");
    content_container.style.opacity = "0";
+   let y = 0.2 * document.documentElement.clientHeight + document.getElementById('header').offsetHeight + document.getElementById('about').offsetHeight;
+   if (window.scrollY > y) {
+      scrollTo(0, y);
+   }
    sleep(100).then(() => {
       clear_vignettes();
       for (let i = 0; i < content.length; i++) {
@@ -87,7 +91,9 @@ const load_vignettes = () => {
          }
       }
       content_container.style.opacity = "1";
-      scrollTo(0, 0.2 * document.documentElement.clientHeight + document.getElementById('header').offsetHeight + document.getElementById('about').offsetHeight);
+      if (window.scrollY > y) {
+         scrollTo(0, y);
+      }
    });
 }
 
