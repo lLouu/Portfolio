@@ -5,6 +5,11 @@ body {
    font: 0.9rem "Verdana", sans-serif;
 }
 
+html {
+   scrollbar-width: thin;
+   scrollbar-color: var(--important) rgba(0, 0, 0, 0);
+}
+
 a {
    color: var(--sub-text);
    text-decoration: none;
@@ -89,9 +94,10 @@ a {
 
 #popup-bg {
    width: 60%;
-   height: 90vh;
+   max-height: 90vh;
    background-color: var(--bg);
    border-radius: 5vh;
+   padding-bottom: 5vh;
 }
 
 #popup-back {
@@ -104,7 +110,7 @@ a {
 #popup-content {
    position: relative;
    width: 90%;
-   height: 80vh;
+   max-height: 80vh;
    left: 5%;
    top: 2vh;
    margin-top: 10px;
@@ -200,4 +206,20 @@ a {
 
 .just-center {
    justify-content: center;
+}
+
+.titleA {
+   font-size: large;
+   font-weight: bold;
+   color: var(--important);
+}
+
+.titleB {
+   font-weight: bold;
+   color: var(--important);
+}
+
+.titleC {
+   font-style: italic;
+   color: var(--sub-text);
 }

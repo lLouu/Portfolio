@@ -51,7 +51,7 @@ const createvignette = (title, type, img, ind) => {
    vignette.classList = "vignette flex column between";
    let illustration = document.createElement('img');
    illustration.classList = "illustration";
-   illustration.href = `img/${img}`;
+   illustration.setAttribute('src', `img/${img}`);
    vignette.appendChild(illustration);
    let title_ele = document.createElement('div');
    title_ele.innerHTML = title;
@@ -86,7 +86,7 @@ const load_vignettes = () => {
 
 const gen_popup = (ind) => {
    document.getElementById("popup-content").innerHTML = content[ind].content[window.sessionStorage.getItem('choice')];
-   if (undefined == document.getElementById("popup-content").innerHTML) {
+   if ("undefined" == document.getElementById("popup-content").innerHTML) {
       document.getElementById("popup-content").innerHTML = content[ind].content['all'];
    }
    let popup = document.getElementById("popup");
