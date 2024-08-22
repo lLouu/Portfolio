@@ -75,13 +75,20 @@ const clear_vignettes = () => {
    n_vignette = 0;
 }
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 const load_vignettes = () => {
-   clear_vignettes();
-   for (let i = 0; i < content.length; i++) {
-      if (window.sessionStorage.getItem('choice') == 'all' || content[i].filters.includes(window.sessionStorage.getItem('choice'))) {
-         createvignette(content[i].title, content[i].type, content[i].img, i);
+   let content_container = document.getElementById("content");
+   content_container.style.opacity = "0";
+   sleep(100).then(() => {
+      clear_vignettes();
+      for (let i = 0; i < content.length; i++) {
+         if (window.sessionStorage.getItem('choice') == 'all' || content[i].filters.includes(window.sessionStorage.getItem('choice'))) {
+            createvignette(content[i].title, content[i].type, content[i].img, i);
+         }
       }
-   }
+      content_container.style.opacity = "1";
+      scrollTo(0, 0.2 * document.documentElement.clientHeight + document.getElementById('header').offsetHeight + document.getElementById('about').offsetHeight);
+   });
 }
 
 const gen_popup = (ind) => {

@@ -3,6 +3,7 @@ body {
    background-color: var(--bg);
    color: var(--text);
    font: 0.9rem "Verdana", sans-serif;
+   transition: background-color 0.2s linear;
 }
 
 html {
@@ -15,6 +16,11 @@ a {
    text-decoration: none;
    font-style: italic;
    cursor: pointer;
+}
+
+a:hover:not(.selected) {
+   color: var(--hover);
+   transition: color 0.2s linear;
 }
 
 #main-box {
@@ -45,6 +51,11 @@ a {
    margin-top: 7.5vh;
 }
 
+#content {
+   transition: opacity 0.1s;
+   opacity: 0;
+}
+
 #about-text,
 #choices {
    margin-top: 10px;
@@ -62,6 +73,7 @@ a {
    padding-bottom: 2vh;
    background-color: var(--bg);
    border-bottom: 0.2px solid var(--bg-bis);
+   transition: background-color 0.2s linear;
 }
 
 #menu {
@@ -72,10 +84,12 @@ a {
    border-radius: 10px;
    width: 50px;
    background-color: var(--bg-bis);
+   transition: background-color 0.3s linear;
 }
 
 #theme-button>img {
    padding: 3px 5px 3px 5px;
+   border-radius: 10px;
 }
 
 #popup {
@@ -98,6 +112,7 @@ a {
    background-color: var(--bg);
    border-radius: 5vh;
    padding-bottom: 5vh;
+   transition: background-color 0.2s linear;
 }
 
 #popup-back {
@@ -120,7 +135,6 @@ a {
 }
 
 .theme-selected {
-   border-radius: 10px;
    background-color: var(--important);
 }
 
@@ -132,6 +146,8 @@ a {
    color: var(--bg);
    text-align: center;
    font-weight: bolder;
+   transition: color 0.2s linear;
+   transition: all 0.1s linear;
 }
 
 .important {
@@ -164,7 +180,6 @@ a {
    margin-top: 10px;
    width: 120px;
    height: 120px;
-   background-color: var(--bg);
    border-radius: 20px;
 }
 
