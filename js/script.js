@@ -35,8 +35,23 @@ const updatechoicemenu = () => {
    document.getElementById(window.sessionStorage.getItem('choice')).setAttribute('class', 'selected');
 }
 
+let line_number;
+function updateScreenSize() {
+   console.log('on')
+   if (window.matchMedia("(max-width: 600px)").matches) {
+      line_number = 2;
+   } else if (window.matchMedia("(min-width: 601px) and (max-width: 1024px)").matches) {
+      line_number = 3;
+   } else {
+      line_number = 5;
+   }
+   load_vignettes();
+}
+window.matchMedia("(max-width: 600px)").addEventListener('change', updateScreenSize);
+window.matchMedia("(min-width: 601px) and (max-width: 1024px)").addEventListener('change', updateScreenSize);
+window.matchMedia("(min-width: 1025px)").addEventListener('change', updateScreenSize);
+
 let n_vignette = 0;
-let line_number = 3;
 // Type being either certification, project, study or account
 const createvignette = (title, type, img, ind) => {
    let content_container = document.getElementById("content");
@@ -126,6 +141,6 @@ window.onload = () => {
    updatetheme();
    if (null == window.sessionStorage.getItem('choice')) { window.sessionStorage.setItem('choice', 'all'); }
    updatechoicemenu();
-   load_vignettes();
+   updateScreenSize();
 }
 

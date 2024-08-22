@@ -51,6 +51,10 @@ a:hover:not(.selected) {
    margin-top: 7.5vh;
 }
 
+#about {
+   width: 60%;
+}
+
 #content {
    transition: opacity 0.1s;
    opacity: 0;
