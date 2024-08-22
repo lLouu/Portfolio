@@ -103,8 +103,16 @@ const gen_popup = (ind) => {
       document.getElementById("popup-content").innerHTML = content[ind].content['all'];
    }
    let popup = document.getElementById("popup");
+   let popup_container = document.getElementById("popup-container");
    document.body.style.overflow = 'hidden';
    popup.setAttribute('style', `top: ${window.scrollY}px; display: flex;`)
+   const handler = (e) => {
+      if (e.target == popup || e.target == popup_container) {
+         withdraw_popup();
+         popup.removeEventListener('click', handler);
+      }
+   }
+   popup.addEventListener('click', handler);
 }
 
 const withdraw_popup = () => {
