@@ -119,6 +119,12 @@ a:hover:not(.selected) {
    transition: background-color 0.2s linear;
 }
 
+@media (max-width: 700px) {
+   #popup-bg {
+      width: 80%;
+   }
+}
+
 #popup-back {
    position: relative;
    top: 2vh;
