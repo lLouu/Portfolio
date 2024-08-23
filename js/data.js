@@ -7,42 +7,30 @@ let content = [
       "content": {
          "all": `
          <div class="titleA">Summary</div><br>
-         During this internship at Onepoint, I conducted research on the migration of Authorization Server APIs, proposing an architectural approach and conducting a POC with Keycloak, Okta, and Apigee.
+         During this internship at Onepoint, I conducted research on the migration of Authorization Server APIs, proposed an architectural approach, and executed a POC with Keycloak, Okta, and Apigee.
          <br><br>
          - In-depth study of authorization systems (SAML, OAuth, OIDC) and existing market solutions.<br>
-         - Proposal of a migration readiness approach with governance support to ensure availability and confidentiality.<br>
-         - Execution of a POC involving Keycloak, Okta, Apigee, OpenLDAP, WordPress, and Squid Proxy.
+         - Proposed a migration readiness approach with governance support to ensure availability and confidentiality.<br>
+         - Executed a POC involving Keycloak, Okta, Apigee, OpenLDAP, WordPress, and Squid Proxy.
          <br><br>
-         <div class="titleA">What I did</div><br>
-         <div class="titleB">Creation of a migration method</div><br>
-         Migrating an authorization server means to put at stak confidentiality of every single dependant application and their disponibility.
-         It is important to make a governance framework to reduce as much as possible risks induced by this kind of migration. For that stack,
-         I made a directive's document that includes how to rationalise migration choices, choose the best options, define a migration politic
-         according to the SLO, and give a good patern for protocolisation to help automation and easy step-by-step migration to use.
+         <div class="titleA">What I Did</div><br>
+         <div class="titleB">Creation of a Migration Method</div><br>
+         Migrating an authorization server involves risking the confidentiality of every dependent application and their availability. It is important to establish a governance framework to minimize the risks associated with this type of migration. For this purpose, I created a directive document that includes guidelines on rationalizing migration choices, selecting the best options, defining a migration policy according to the SLO, and providing a good pattern for protocolization to facilitate automation and a smooth step-by-step migration process.
          <br><br>
          <div class="titleC">Features</div>
-         - Method to find out client biais, and get the stakes<br>
-         - Method to sort which stakes are the most important based on objective cost for the client and biais<br>
-         - Method to identify the architecture implyed by the stakes<br>
-         - Method to give a score for each modification propositions according to its cost and previsioned results, and filter them based on it<br>
-         - Method to produce a good protocol, automate it and execute it
+         - Method to identify client biases and understand the stakes<br>
+         - Method to prioritize stakes based on objective cost for the client and biases<br>
+         - Method to identify the architecture implicated by the stakes<br>
+         - Method to assign a score to each proposed modification based on its cost and projected results, and filter them accordingly<br>
+         - Method to produce a robust protocol, automate it, and execute it
          <br><br><br>
          <div class="titleB">Creation of a Sandbox for a PoC</div><br>
-         To prove in which ways the migration method helps, I made a sandbox of 7 VMs that simulate a simple information system. This system includes
-         two pfsense, a user post, an openldap, a keycloak, a wordpress, an nginx used for reverse-proxy, and a squid proxy.
-         I setted up some authorizations, from a simple ldap authorization using squid proxy, ldap synch between openldap and keycloak,
-         and OAuth connexions on wordpress using keycloak and a wordpress addon.
+         To demonstrate how the migration method works, I created a sandbox of 7 VMs that simulate a simple information system. This system includes two pfSense instances, a user workstation, an OpenLDAP server, a Keycloak server, a WordPress instance, an Nginx server used as a reverse proxy, and a Squid proxy. I set up various authorization scenarios, from a simple LDAP authorization using Squid Proxy, LDAP synchronization between OpenLDAP and Keycloak, to OAuth connections on WordPress using Keycloak and a WordPress add-on.
          <br><br><br>
-         <div class="titleB">Study of the technology and analyse of existing market solutions</div><br>
-         To do the otherall task, I needed to collect many data. First thing was to get documents about authorization server.
-         I got many external sources using blogs, cybersecurity public institutions, and google scholar. From all this data, 
-         I got to learn from basic things, such as how SAML, OAuth and OIDC works and differ, I got to learn recommendations
-         that may be too exigent in most cases, and I also got to learn more exotic practices to try going around issues
-         such as ways to reduce the dependencies of a service to its identity provider
+         <div class="titleB">Study of Technology and Analysis of Existing Market Solutions</div><br>
+         To complete the overall task, I needed to gather extensive data. The first step was to obtain documents about authorization servers. I collected numerous external sources using blogs, cybersecurity public institutions, and Google Scholar. From this data, I learned the basics of how SAML, OAuth, and OIDC work and differ. I also explored recommendations that may be overly stringent in most cases, as well as more unconventional practices for mitigating issues, such as reducing a service's dependency on its identity provider.
          <br><br>
-         Another type of data was about existing solutions for API Managers, for Authorization Servers, and for integration platform as a service.
-         First, I got a list of solutions using Gartners' magic quadrant, and using some tops from blog over internet.
-         Once done, I checked their popularity to know which ones would be the most likely to be found in practice with the clients.
+         Another type of data involved existing solutions for API Managers, Authorization Servers, and Integration Platforms as a Service (iPaaS). I first compiled a list of solutions using Gartner's Magic Quadrant and some top blog recommendations from the internet. Afterward, I checked their popularity to determine which ones were most likely to be encountered in practice with clients.
          `
       }
    },
@@ -54,31 +42,24 @@ let content = [
       "content": {
          "all": `
          <div class="titleA">Summary</div><br>
-         Mission of Onepoint at Editis to do a diagnostic for infrastructure management, covering technological, financial, and HR aspects, with a focus on VMWare, HR management savings, and IT governance improvement.
+         Mission of Onepoint at Editis involved conducting a diagnostic for infrastructure management, covering technological, financial, and HR aspects, with a focus on VMWare, HR management savings, and IT governance improvement.
          <br><br>
          - Participated in 10 workshops with colleagues<br>
          - Developed a maturity assessment framework<br>
          - Team included an expert architect and a business strategy specialist<br>
-         - Analysis of VMWare price increases and potential HR management savingsDiagnostic
+         - Analyzed VMWare price increases and potential HR management savings
          <br><br>
-         <div class="titleA">What I did</div><br>
+         <div class="titleA">What I Did</div><br>
          <div class="titleB">Workshops & Reports</div><br>
-         As a team of three, we got to work with EDITIS to analyse with them their structure, and find out if its cost is rationnal compared to its use.
-         We looked at four axes : Technology, Human Ressources, Finance and Contracts. To go through all of the subjects, we made a total of ten workshops.
-         We got to hear many actors from within the IT department as well as outside, working with them.
+         As a team of three, we collaborated with EDITIS to analyze their structure and determine if its costs were rational compared to its usage. We focused on four key areas: Technology, Human Resources, Finance, and Contracts. To thoroughly cover all topics, we conducted a total of ten workshops, engaging with various stakeholders from both within and outside the IT department.
          <br><br>
-         Using the notes of the workshops, we mad reports to make sure we understood well, and to remind what we sayed.
-         It is usefull to keep track for further analysis, but also to remember what we said we would do or need in the near futur.
-         We also made an excel to keep track of actions that needs to be done, and to index the documents we got to facilitate fetching for information.
+         Using the notes from the workshops, we created reports to ensure accurate understanding and to document our discussions. This was useful for further analysis and for keeping track of what we agreed to do or needed in the near future. We also created an Excel sheet to track actions that needed to be completed and to index the documents we received, facilitating easy retrieval of information.
          <br><br><br>
-         <div class="titleB">Maturity assessment</div><br>
-         Based on the data, we managed to do a maturity assessment. To do so, we sorted the information in themes, and for each themes we checked
-         the strengh and weaknesses. Based on this, and on a scale, we can also give a notation to each of them, and end up with numbers to make graphs and visuals.
+         <div class="titleB">Maturity Assessment</div><br>
+         Based on the collected data, we conducted a maturity assessment. We organized the information into themes, and for each theme, we evaluated strengths and weaknesses. Using a scale, we assigned scores to each theme, which allowed us to generate graphs and visuals.
          <br><br><br>
-         <div class="titleB">Recommandations</div><br>
-         Using the maturity assessment, we can also provide recommandations, meaning how we, as onepoint, would handle the fact to make things
-         better if needed (not doing anything more on something that is working is a good practice). From this, we could
-         provide gains for each recommandations, and a estimated time of arrival if they begin to do the recommandation as soon as possible.
+         <div class="titleB">Recommendations</div><br>
+         Using the maturity assessment, we provided recommendations on how we, as Onepoint, would address areas for improvement if needed (maintaining what is already working well is also a good practice). From this, we outlined potential gains for each recommendation and provided an estimated timeline for implementation if the recommendations were acted upon immediately.
          `
       }
    },
@@ -90,46 +71,34 @@ let content = [
       "content": {
          "all": `
          <div class="titleA">Summary</div><br>
-         Internship at Alstom aiming to automate the deployment of CSP (CyberSecurity Provider) modules, involving exploration of network architecture and development of a framework for automation scripts.
+         Internship at Alstom focused on automating the deployment of CSP (CyberSecurity Provider) modules, involving the exploration of network architecture and the development of a framework for automation scripts.
          <br><br>
-         - Exploration of network architecture involving CSP services like Active Directory, PKI, and Radius.<br>
-         - Development of an automation script framework.<br>
-         - Implementation of standards within the framework (logging, step-by-step execution).<br>
-         - Generation of scripts in Python or PowerShell using the framework.
+         - Explored network architecture involving CSP services like Active Directory, PKI, and Radius.<br>
+         - Developed a framework for automation scripts.<br>
+         - Implemented standards within the framework (logging, step-by-step execution).<br>
+         - Generated scripts in Python or PowerShell using the framework.
          <br><br>
-         <div class="titleA">What I did</div><br>
+         <div class="titleA">What I Did</div><br>
          <div class="titleB">Deployment Automation</div><br>
-         First thing was to make deployment automation. CSP has a hundreds-page sized manual to deploy its module, should it be AD, Radius, PKI, or other of its components.
-         Based on this manual that gives all expicit actions, I needed to make bash and powershell scripts to automate it.
-         This automation was for simple cli command execution, but could also be about automating actions to do with gui. Sometimes, this gui had
-         a cli, sometimes they don't and we needed to contact the developer or retro-engineered the software to get how to automate it.
+         The first task was to automate deployment. CSP provides a manual, hundreds of pages long, detailing how to deploy its modules, whether it's AD, Radius, PKI, or other components. Based on this manual, which specifies all explicit actions, I created Bash and PowerShell scripts to automate the process. This automation covered simple CLI command execution and actions within GUIs. Sometimes, the GUI had a CLI, and when it didn't, we had to contact the developer or reverse-engineer the software to determine how to automate it.
          <br><br><br>
          <div class="titleB">Automation Framework Development</div><br>
-         During the deployment automation, we found out three main problems :<br>
-         - CSP modules changes every month or so, meaning automation needs to be edited regularly<br>
-         - Sysadmins do not all have competencies to read and edit code
-         - scripts did not have common libraries for regular actions, such as logging
+         During the deployment automation, we identified three main challenges:<br>
+         - CSP modules change every month or so, requiring regular updates to the automation.<br>
+         - Not all sysadmins have the skills to read and edit code.<br>
+         - The scripts lacked common libraries for regular actions, such as logging.
          <br><br>
-         Because of such things, I got to work on a framework in python that transform a english-like language to powershell and python.
-         This could also be called a compilator looking at what it does.
-         This framework works using verbs as function caller, for exemple "in some_file.txt write Hello World" would be converted
-         by File.append("some_file.txt", "Hello World") in the scripts. In general, it works with the syntax "<verb> <param> <verb2> <param2> [...]"
-         Features for conditions, for loop and variables were included. The framework had a dynamic command library as a json,
-         that can be edited to add more callable functions by other developers, and how to call them.
-         In the overall, it had a normalization system, meaning the script did the console and file logs, as well as works using a
-         common cli that can manages steps to do partial execution or specific steps only.
-         Variables could be edited using a GUI made with tkinter. This way, a complied script would give its python and powershell versions,
-         as well as a data.csv and data.json that allows to setup the script variables. If a variable is not given, the script would ask for it
-         at the begining.<br>
-         Two documentation has been made : the first to explain the framework itself, and another for user to know how to create and compile a script,
-         and to index all available commands.
+         To address these issues, I developed a Python framework that converts an English-like language into PowerShell and Python scripts. This framework acts as a compiler of sorts. It uses verbs as function callers; for example, "in some_file.txt write Hello World" would be converted to `File.append("some_file.txt", "Hello World")` in the scripts. Generally, it follows the syntax "<verb> <param> <verb2> <param2> [...]". The framework includes features for conditions, loops, and variables. It also has a dynamic command library stored in a JSON file, which can be edited by other developers to add more callable functions.
+         <br><br>
+         Overall, the framework includes a normalization system, meaning the script handles console and file logs and operates with a common CLI that manages steps for partial or specific execution. Variables can be edited using a GUI built with Tkinter. This way, a compiled script generates its Python and PowerShell versions, along with data.csv and data.json files for setting up script variables. If a variable is not provided, the script prompts for it at the beginning.<br>
+         Two documentation sets were created: one explaining the framework itself, and another guiding users on how to create and compile scripts, along with an index of all available commands.
          <br><br>
          <div class="titleC">Features</div>
-         - OOP script framework that allow common cli between scripts<br>
-         - Log system library and common logging codes synthax<br>
-         - natural-language compilation into python and powershell scripts and csv and json data sheet to fill<br>
-         - dynamic json dictionary to add new command in the natural language<br>
-         - GUI to manage the data sheets (csv-json convertions, sheet encryption, filling the sheets, with simple features such as integration of ctrl shortcuts)
+         - OOP script framework allowing a common CLI between scripts<br>
+         - Logging system library and common logging code syntax<br>
+         - Natural-language compilation into Python and PowerShell scripts with accompanying CSV and JSON data sheets<br>
+         - Dynamic JSON dictionary to add new commands in the natural language<br>
+         - GUI to manage data sheets (CSV-JSON conversions, sheet encryption, filling the sheets, with simple features like integration of Ctrl shortcuts)
          `
       }
    },
@@ -141,37 +110,19 @@ let content = [
       "content": {
          "all": `
          <div class="titleA">Summary</div><br>
-         The "Master Project" is a project with 8 students during the first year of Master at EFREI Paris.
-         The one about cybersecurity is especially demanding for competencies around information systems.
-         We needed to deliver a fully integrated information system with components such as DNS, Web Server, Proxy,
-         Active Directory, and Mail. Overall, we also had to follow audit protocols and cybersecurity processes.
+         The "Master Project" is a collaborative project with 8 students during the first year of the Master's program at EFREI Paris. The cybersecurity-focused project was particularly demanding, requiring strong competencies in information systems. We were tasked with delivering a fully integrated information system, including components such as DNS, Web Server, Proxy, Active Directory, and Mail. Additionally, we had to adhere to audit protocols and cybersecurity processes.
          <br><br>
          <div class="titleA">What I Did</div><br>
-         <div class="titleB">Design an Information System</div><br>
-         First thing was designing the information system. It included many features, such as public and private DNS, an AD with its RODC, a PKI, a website,
-         a local webmail server, proxy and reverse-proxy, a private file server, an EDR and an ERP. Three main zones where made : a DMZ, a Server
-         zone and a user zone. Within each, it had sub-divisions, such as DMZ-IN (reverse proxy and public DNS), DMZ-OUT (proxy and private DNS),
-         DMZ-INOUT (MDA) and DMZ-Technical (RODC) ; Server-services (web server, MDA, AD), Server-monitor (ERP, EDR),
-         Server-data (File server, log server and backup server) and Server-Critical (AD, Root CA).
+         <div class="titleB">Design of an Information System</div><br>
+         The first task was designing the information system. It included many features, such as public and private DNS, an AD with its RODC, a PKI, a website, a local webmail server, proxy and reverse proxy, a private file server, an EDR, and an ERP. We created three main zones: a DMZ, a Server zone, and a User zone. Each zone was further subdivided: DMZ-IN (reverse proxy and public DNS), DMZ-OUT (proxy and private DNS), DMZ-INOUT (MDA), DMZ-Technical (RODC); Server-services (web server, MDA, AD), Server-monitor (ERP, EDR), Server-data (File server, log server, and backup server), and Server-Critical (AD, Root CA).
          <br><br><br>
          <div class="titleB">Deployment in an ESX</div><br>
-         I personnaly got to setup the proxy and reverse proxy, the firewalls with IPS, and the whole DNS and its record for non-AD
-         relative actions and the root CA. Due to timings, we could not deploy everything that has been asked (and were not meant to do everything). 
-         Because of such, we did not deploy the ERP, the EDR, nor the backup server.<br>
-         The proxy was a squid proxy configured as a transparent proxy, meaning every internal web and dns request would be bound to go through it
-         even if the proxy is not manually setted up.
-         The firewall got every unecessary packets filter thanks to a well-done network matrice
-         that indexed every destination that would be reach by a given source. Simple IPS rules where setted up.
-         The DNS managed two domains, one private managed by the AD and replicated on the DMZ-OUT by a cache DNS, that would also forward other
-         request to 8.8.8.8, and another public that had records to reach the website and mail server with the MX, spf and DKIM.
-         Finally, the rootCA has been added as trusted CA by the AD, and signed the certificate of all TLS communications from within the
-         Information System.
+         I personally set up the proxy and reverse proxy, the firewalls with IPS, and the entire DNS system with its records for non-AD related actions and the root CA. Due to time constraints, we could not deploy everything that was requested (and were not expected to do everything). As a result, the ERP, EDR, and backup server were not deployed.<br>
+         The proxy was configured as a Squid transparent proxy, meaning every internal web and DNS request would be routed through it, even if the proxy was not manually configured. The firewall filtered unnecessary packets using a well-constructed network matrix that indexed every destination reachable by a given source. Simple IPS rules were implemented. The DNS managed two domains: one private, managed by the AD and replicated in the DMZ-OUT by a cache DNS that also forwarded other requests to 8.8.8.8, and another public domain with records for accessing the website and mail server, including MX, SPF, and DKIM. Finally, the root CA was added as a trusted CA by the AD and signed the certificates for all TLS communications within the information system.
          <br><br><br>
          <div class="titleB">Security Audit</div><br>
-         A part of the project was also about auditing our structure, by doing a risk analysis. We used a simple EBIOS RM to do it
-         and keep track of pottential threats.<br>
-         Also, since the project had multiple teams, it was possible that we tryed to attack others, or getting attacked by others
-         or by our teachers (following some predetermined rules). This was also a good stress test of our system and other's ones.
+         A part of the project involved auditing our infrastructure by conducting a risk analysis. We used a simple EBIOS RM for this purpose to track potential threats.<br>
+         Additionally, since the project involved multiple teams, it was possible to attempt attacks on other teams or defend against attacks from them or our teachers (following predetermined rules). This served as an effective stress test for our system and others.
          `
       }
    },
@@ -183,19 +134,15 @@ let content = [
       "content": {
          "all": `
          <div class="titleA">Summary</div><br>
-         PenEnv is a personnal project I made for the pentesting certifications I'm targeting to pass.
-         Its goal is to allow an harmonisation to install the environnment for penneration testing with Linux.
-         It mostly use automation to do so. It also has the goal to automatise some steps for pentesting
+         PenEnv is a personal project I created to prepare for the penetration testing certifications I am aiming to pass. Its purpose is to standardize the installation of a penetration testing environment on Linux, primarily through automation. Additionally, it aims to automate certain steps in the penetration testing process.
          <br><br>
-         It is opensource and findable at my github : <a href="https://github.com/lLouu/Penenv" target="_blank">https://github.com/lLouu/Penenv</a>
+         It is open-source and available on my GitHub: <a href="https://github.com/lLouu/Penenv" target="_blank">https://github.com/lLouu/Penenv</a>
          <br><br>
          <div class="titleA">Features</div><br>
-         - Oneliner installer<br>
-         - 112 pentesting tools installation, containing dev languages, web scanning, bruteforce tools, network tools, exploit libraries,
-         revshell tools, and analysis and exploit scripts<br>
-         - custom bash tool to execute server by putting their live uncached input and output stream in readable en editable files, allowing
-         an easy management of automated interactions with background tasks<br>
-         - custom bash tools to facilitate basic tasks for limited access rev shells
+         - One-liner installer<br>
+         - Installation of 112 penetration testing tools, including development languages, web scanning, brute-force tools, network tools, exploit libraries, reverse shell tools, and analysis and exploit scripts<br>
+         - Custom Bash tool to execute servers by putting their live, uncached input and output streams into readable and editable files, allowing easy management of automated interactions with background tasks<br>
+         - Custom Bash tools to facilitate basic tasks for limited-access reverse shells
          `
       }
    },
@@ -207,17 +154,13 @@ let content = [
       "content": {
          "all": `
          <div class="titleA">Summary</div><br>
-         My portfolio is my personal project you are currently looking at. The idea is to provide
-         a portfolio in a one-pager that can be hosted on free-tier OVH hosting that's offered with a domain name.
-         This comes by only being able to do a client-side server with only html, css and js. I made multiple functionalities,
-         such as a theme manager, a dynamic content system to make it easy to add and remove new content, a filter,
-         local storage management to allow consistent theme and filtering choices, and obviously a bit of frontend design.
+         My portfolio is the personal project you are currently viewing. The idea was to create a one-page portfolio that can be hosted on free-tier OVH hosting, which comes with a domain name. This is achieved by using only client-side technologies, including HTML, CSS, and JavaScript. I implemented several features, such as a theme manager, a dynamic content system for easily adding and removing content, a filter, local storage management to maintain consistent theme and filtering choices, and, of course, some frontend design.
          <br><br>
-         It is opensource and findable at my github : <a href="https://github.com/lLouu/Portfolio" target="_blank">https://github.com/lLouu/Portfolio</a>
+         It is open-source and available on my GitHub: <a href="https://github.com/lLouu/Portfolio" target="_blank">https://github.com/lLouu/Portfolio</a>
          <br><br>
          <div class="titleA">Features</div><br>
-         - Full client side website (html, css & js) without usage of frameworks<br>
-         - Light & Dark theme<br>
+         - Fully client-side website (HTML, CSS & JS) without the use of frameworks<br>
+         - Light & Dark themes<br>
          - Dynamic vignette content<br>
          - Client-side filtering<br>
          - Custom popups
