@@ -103,7 +103,7 @@ let content = [
       }
    },
    {
-      "title": "Créer un Système d'Information from scratch",
+      "title": "Créer un Système d'Information",
       "type": "projet",
       "img": "master_project.png",
       "filters": ["devsecops", "ci/cd", "sysadmin", "audit"],
