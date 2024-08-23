@@ -35,11 +35,54 @@ const updatechoicemenu = () => {
    document.getElementById(window.sessionStorage.getItem('choice')).setAttribute('class', 'selected');
 }
 
+const reduced_style = () => {
+   let h = document.getElementById('header');
+   h.classList.add('column');
+   h.style.height = "70px";
+   h.children[1].classList.remove("column");
+   document.getElementById('menu').style.top = "calc(70px + 4vh)"
+   document.getElementById('choices').innerHTML = `<div class="flex just-center">
+                     <a id="all" onclick="changechoice('all')" class="selected">Tous</a>
+                     <a id="ci/cd" onclick="changechoice('ci/cd')">CI/CD</a>
+                     <a id="sysadmin" onclick="changechoice('sysadmin')">SysAdmin</a>
+                  </div>
+                  <div class="flex just-center">
+                     <a id="cloud" onclick="changechoice('cloud')">Cloud</a>
+                     <a id="devsecops" onclick="changechoice('devsecops')">DevSecOps</a>
+                     <a id="audit" onclick="changechoice('audit')">Audit</a>
+                  </div>
+                  <div class="flex just-center">
+                     <a id="pentesting" onclick="changechoice('pentesting')">Pentesting</a>
+                  </div>`
+};
+
+const normal_size = () => {
+   let h = document.getElementById('header');
+   h.classList.remove('column');
+   h.style.height = "45px";
+   h.children[1].classList.add("column");
+   document.getElementById('menu').style.top = "calc(45px + 4vh)"
+   document.getElementById('choices').innerHTML = `<div class="flex just-center">
+                     <a id="all" onclick="changechoice('all')" class="selected">Tous</a>
+                     <a id="ci/cd" onclick="changechoice('ci/cd')">CI/CD</a>
+                     <a id="sysadmin" onclick="changechoice('sysadmin')">SysAdmin</a>
+                     <a id="cloud" onclick="changechoice('cloud')">Cloud</a>
+                  </div>
+                  <div class="flex just-center">
+                     <a id="devsecops" onclick="changechoice('devsecops')">DevSecOps</a>
+                     <a id="audit" onclick="changechoice('audit')">Audit</a>
+                     <a id="pentesting" onclick="changechoice('pentesting')">Pentesting</a>
+                  </div>`
+};
+
 let line_number;
 function updateScreenSize() {
-   console.log('on')
-   if (window.matchMedia("(max-width: 600px)").matches) {
+   if (window.matchMedia("(max-width: 400px)").matches) {
+      line_number = 1;
+      reduced_style();
+   } else if (window.matchMedia("(min-width: 401px) and (max-width: 600px)").matches) {
       line_number = 2;
+      normal_size();
    } else if (window.matchMedia("(min-width: 601px) and (max-width: 1024px)").matches) {
       line_number = 3;
    } else {
@@ -47,7 +90,8 @@ function updateScreenSize() {
    }
    load_vignettes();
 }
-window.matchMedia("(max-width: 600px)").addEventListener('change', updateScreenSize);
+window.matchMedia("(max-width: 400px)").addEventListener('change', updateScreenSize);
+window.matchMedia("(min-width: 401px) and (max-width: 1024px)").addEventListener('change', updateScreenSize);
 window.matchMedia("(min-width: 601px) and (max-width: 1024px)").addEventListener('change', updateScreenSize);
 window.matchMedia("(min-width: 1025px)").addEventListener('change', updateScreenSize);
 
