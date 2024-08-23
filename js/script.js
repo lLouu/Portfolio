@@ -40,7 +40,7 @@ const reduced_style = () => {
    h.classList.add('column');
    h.style.height = "70px";
    h.children[1].classList.remove("column");
-   document.getElementById('menu').style.top = "calc(70px + 4vh)"
+   document.getElementById('menu').style.top = "calc(60px + 4vh)"
    document.getElementById('choices').innerHTML = `<div class="flex just-center">
                      <a id="all" onclick="changechoice('all')" class="selected">Tous</a>
                      <a id="ci/cd" onclick="changechoice('ci/cd')">CI/CD</a>
@@ -61,7 +61,7 @@ const normal_size = () => {
    h.classList.remove('column');
    h.style.height = "45px";
    h.children[1].classList.add("column");
-   document.getElementById('menu').style.top = "calc(45px + 4vh)"
+   document.getElementById('menu').style.top = "calc(42px + 4vh)"
    document.getElementById('choices').innerHTML = `<div class="flex just-center">
                      <a id="all" onclick="changechoice('all')" class="selected">Tous</a>
                      <a id="ci/cd" onclick="changechoice('ci/cd')">CI/CD</a>
