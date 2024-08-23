@@ -1,4 +1,5 @@
-let content = [
+const see_more_str = "See more →"
+const content = [
    {
       "title": "Junior Architect",
       "type": "job - internship",
