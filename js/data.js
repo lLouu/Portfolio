@@ -169,7 +169,7 @@ let content = [
    },
    {
       "title": "EFREI Paris",
-      "type": "study",
+      "type": "études",
       "img": "efrei.jpg",
       "filters": ["sysadmin", "devsecops", "audit"],
       "content": {
@@ -195,7 +195,7 @@ let content = [
    },
    {
       "title": "AWS Solution Architect Associate",
-      "type": "study",
+      "type": "études",
       "img": "aws.png",
       "filters": ["sysadmin", "cloud"],
       "content": {
@@ -209,7 +209,7 @@ let content = [
    },
    {
       "title": "AZ-104",
-      "type": "study",
+      "type": "études",
       "img": "azure.png",
       "filters": ["sysadmin", "cloud"],
       "content": {
@@ -245,22 +245,22 @@ let content = [
    //    }
    // },
    {
-      "title": "My Github",
-      "type": "account",
+      "title": "Mon Github",
+      "type": "compte",
       "img": "github.png",
       "filters": ["devsecops", "pentesting", "ci/cd"],
       "links": "https://github.com/lLouu"
    },
    {
-      "title": "My Hackthebox",
-      "type": "account",
+      "title": "Mon Hackthebox",
+      "type": "compte",
       "img": "hackthebox.png",
       "filters": ["pentesting"],
       "links": "https://app.hackthebox.com/profile/1426168"
    },
    {
-      "title": "My CodingGame",
-      "type": "account",
+      "title": "Mon CodingGame",
+      "type": "compte",
       "img": "codinggame.jpg",
       "filters": ["devsecops"],
       "links": "https://www.codingame.com/profile/98c9da903a5b276d4cbc503fbe5680da6636135"
