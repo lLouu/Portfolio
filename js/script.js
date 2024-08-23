@@ -120,8 +120,8 @@ const createvignette = (title, type, img, ind) => {
    type_ele.classList = "vignette-type";
    vignette.appendChild(type_ele);
    let see_more = document.createElement('a');
-   see_more.innerHTML = "See more →";
-   if (type == 'account') { see_more.href = content[ind].links; see_more.target = "_blank"; }
+   see_more.innerHTML = see_more_str;
+   if (type == 'account' || type == 'compte') { see_more.href = content[ind].links; see_more.target = "_blank"; }
    else { see_more.setAttribute('onclick', `gen_popup("${ind}");`); }
    vignette.appendChild(see_more);
    line.appendChild(vignette);
