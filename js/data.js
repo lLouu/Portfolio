@@ -1,169 +1,169 @@
 let content = [
    {
-      "title": "Junior Architect",
-      "type": "job - internship",
+      "title": "Architect Junior",
+      "type": "travail - stage",
       "img": "onepoint.png",
       "filters": ["sysadmin", "ci/cd", "audit", "cloud"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         During this internship at Onepoint, I conducted research on the migration of Authorization Server APIs, proposed an architectural approach, and executed a POC with Keycloak, Okta, and Apigee.
+         <div class="titleA">Résumé</div><br>
+         Au cours de ce stage chez Onepoint, j'ai réalisé des recherches sur la migration des API de Serveur d'Autorisation, proposé une approche architecturale et exécuté un POC avec Keycloak, Okta et Apigee.
          <br><br>
-         - In-depth study of authorization systems (SAML, OAuth, OIDC) and existing market solutions.<br>
-         - Proposed a migration readiness approach with governance support to ensure availability and confidentiality.<br>
-         - Executed a POC involving Keycloak, Okta, Apigee, OpenLDAP, WordPress, and Squid Proxy.
+         - Étude approfondie des systèmes d'autorisation (SAML, OAuth, OIDC) et des solutions existantes sur le marché.<br>
+         - Proposition d'une approche de préparation à la migration avec un support de gouvernance pour garantir la disponibilité et la confidentialité.<br>
+         - Réalisation d'un POC impliquant Keycloak, Okta, Apigee, OpenLDAP, WordPress et Squid Proxy.
          <br><br>
-         <div class="titleA">What I Did</div><br>
-         <div class="titleB">Creation of a Migration Method</div><br>
-         Migrating an authorization server involves risking the confidentiality of every dependent application and their availability. It is important to establish a governance framework to minimize the risks associated with this type of migration. For this purpose, I created a directive document that includes guidelines on rationalizing migration choices, selecting the best options, defining a migration policy according to the SLO, and providing a good pattern for protocolization to facilitate automation and a smooth step-by-step migration process.
+         <div class="titleA">Ce que j'ai fait</div><br>
+         <div class="titleB">Création d'une Méthode de Migration</div><br>
+         La migration d'un serveur d'autorisation implique un risque pour la confidentialité de chaque application dépendante et leur disponibilité. Il est important d'établir un framework de gouvernance pour minimiser les risques associés à ce type de migration. À cette fin, j'ai créé un document de directives incluant des méthodes pour rationaliser des choix de migration, la sélection des meilleures choix, la définition d'une politique de migration selon les SLO, et le moyen de produire d'un bon modèle pour la protocolisation afin de faciliter l'automatisation et une migration fluide étape par étape.
          <br><br>
-         <div class="titleC">Features</div>
-         - Method to identify client biases and understand the stakes<br>
-         - Method to prioritize stakes based on objective cost for the client and biases<br>
-         - Method to identify the architecture implicated by the stakes<br>
-         - Method to assign a score to each proposed modification based on its cost and projected results, and filter them accordingly<br>
-         - Method to produce a robust protocol, automate it, and execute it
+         <div class="titleC">Caractéristiques</div>
+         - Méthode pour identifier les biais des clients et comprendre les enjeux<br>
+         - Méthode pour prioriser les enjeux en fonction du coût objectif pour le client et des biais<br>
+         - Méthode pour identifier l'architecture impliquée par les enjeux<br>
+         - Méthode pour attribuer un score à chaque modification proposée en fonction de son coût et des résultats projetés, et les filtrer en conséquence<br>
+         - Méthode pour produire un protocole robuste, l'automatiser et l'exécuter
          <br><br><br>
-         <div class="titleB">Creation of a Sandbox for a PoC</div><br>
-         To demonstrate how the migration method works, I created a sandbox of 7 VMs that simulate a simple information system. This system includes two pfSense instances, a user workstation, an OpenLDAP server, a Keycloak server, a WordPress instance, an Nginx server used as a reverse proxy, and a Squid proxy. I set up various authorization scenarios, from a simple LDAP authorization using Squid Proxy, LDAP synchronization between OpenLDAP and Keycloak, to OAuth connections on WordPress using Keycloak and a WordPress add-on.
+         <div class="titleB">Création d'un Sandbox pour un PoC</div><br>
+         Pour démontrer le fonctionnement de la méthode de migration, j'ai créé un bac à sable de 7 VM simulant un système d'information simple. Ce système comprend deux instances de pfSense, une station de travail utilisateur, un serveur OpenLDAP, un serveur Keycloak, une instance WordPress, un serveur Nginx utilisé comme reverse proxy, et un squid proxy. J'ai mis en place divers scénarios d'autorisation, allant d'une simple autorisation LDAP utilisant Squid Proxy, la synchronisation LDAP entre OpenLDAP et Keycloak, jusqu'aux connexions OAuth sur WordPress en utilisant Keycloak et un plugin WordPress.
          <br><br><br>
-         <div class="titleB">Study of Technology and Analysis of Existing Market Solutions</div><br>
-         To complete the overall task, I needed to gather extensive data. The first step was to obtain documents about authorization servers. I collected numerous external sources using blogs, cybersecurity public institutions, and Google Scholar. From this data, I learned the basics of how SAML, OAuth, and OIDC work and differ. I also explored recommendations that may be overly stringent in most cases, as well as more unconventional practices for mitigating issues, such as reducing a service's dependency on its identity provider.
+         <div class="titleB">Étude de la Technologie et Analyse des Solutions Existantes sur le Marché</div><br>
+         Pour compléter la mission, j'ai dû recueillir des données diverses. La première étape a été d'obtenir des documents sur les serveurs d'autorisation. J'ai collecté de nombreuses sources externes à partir de blogs, de l'ANSSI et d'autres institutions publiques, et de Google Scholar. À partir de ces données, j'ai appris les bases du fonctionnement et des différences entre SAML, OAuth et OIDC. J'ai également exploré des recommandations gouvernementales, ainsi que des pratiques plus atypiques pour atténuer les problèmes, telles que la réduction de la dépendance d'un service à son fournisseur d'identité.
          <br><br>
-         Another type of data involved existing solutions for API Managers, Authorization Servers, and Integration Platforms as a Service (iPaaS). I first compiled a list of solutions using Gartner's Magic Quadrant and some top blog recommendations from the internet. Afterward, I checked their popularity to determine which ones were most likely to be encountered in practice with clients.
+         Un autre type de données concernait les solutions existantes pour les Gestionnaires d'API, les Serveurs d'Autorisation, et les Plateformes d'Intégration en tant que Service (iPaaS). J'ai d'abord compilé une liste de solutions en utilisant le Magic Quadrant de Gartner et quelques recommandations de blogs populaires sur Internet. Ensuite, j'ai vérifié leur popularité pour déterminer lesquelles étaient les plus susceptibles d'être rencontrées en pratique avec les clients.
          `
       }
    },
    {
-      "title": "Junior Analyst",
-      "type": "job - internship",
+      "title": "Analyst Junior",
+      "type": "travail - stage",
       "img": "editis.png",
       "filters": ["audit"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         Mission of Onepoint at Editis involved conducting a diagnostic for infrastructure management, covering technological, financial, and HR aspects, with a focus on VMWare, HR management savings, and IT governance improvement.
+         <div class="titleA">Résumé</div><br>
+         La mission de Onepoint chez Editis a consisté à réaliser un diagnostic pour la gestion des infrastructures, couvrant les aspects technologiques, financiers et RH, avec un accent sur VMWare, les économies de gestion des ressources humaines et l'amélioration de la gouvernance informatique.
          <br><br>
-         - Participated in 10 workshops with colleagues<br>
-         - Developed a maturity assessment framework<br>
-         - Team included an expert architect and a business strategy specialist<br>
-         - Analyzed VMWare price increases and potential HR management savings
+         - Participation à 10 ateliers avec des collègues<br>
+         - Utilisation d'un framework d'évaluation de la maturité<br>
+         - L'équipe comprenait un architecte expert et un spécialiste de la stratégie d'entreprise<br>
+         - Analyse des augmentations de prix de VMWare et des économies potentielles en gestion des ressources humaines
          <br><br>
-         <div class="titleA">What I Did</div><br>
-         <div class="titleB">Workshops & Reports</div><br>
-         As a team of three, we collaborated with EDITIS to analyze their structure and determine if its costs were rational compared to its usage. We focused on four key areas: Technology, Human Resources, Finance, and Contracts. To thoroughly cover all topics, we conducted a total of ten workshops, engaging with various stakeholders from both within and outside the IT department.
+         <div class="titleA">Ce que j'ai fait</div><br>
+         <div class="titleB">Ateliers & Rapports</div><br>
+         En tant qu'équipe de trois, nous avons collaboré avec EDITIS pour analyser leur structure et déterminer si ses coûts étaient rationnels par rapport à son utilisation. Nous avons concentré notre attention sur quatre domaines clés : la Technologie, les Ressources Humaines, les Finances et le Contratctuel. Pour couvrir tous les sujets en profondeur, nous avons organisé au total dix ateliers, impliquant divers parties prenantes de l'interne et de l'externe du département informatique.
          <br><br>
-         Using the notes from the workshops, we created reports to ensure accurate understanding and to document our discussions. This was useful for further analysis and for keeping track of what we agreed to do or needed in the near future. We also created an Excel sheet to track actions that needed to be completed and to index the documents we received, facilitating easy retrieval of information.
+         En utilisant les notes des ateliers, nous avons créé des rapports pour garantir une compréhension précise et documenter nos discussions. Cela a été utile pour une analyse ultérieure et pour suivre ce que nous avions convenu de faire dans un avenir proche. Nous avons également créé une feuille Excel pour suivre les actions à accomplir et indexer les documents reçus, facilitant ainsi la récupération des informations.
          <br><br><br>
-         <div class="titleB">Maturity Assessment</div><br>
-         Based on the collected data, we conducted a maturity assessment. We organized the information into themes, and for each theme, we evaluated strengths and weaknesses. Using a scale, we assigned scores to each theme, which allowed us to generate graphs and visuals.
+         <div class="titleB">Évaluation de la Maturité</div><br>
+         Sur la base des données collectées, nous avons réalisé une évaluation de la maturité. Nous avons organisé les informations en thèmes, et pour chaque thème, nous avons évalué les forces et les faiblesses. En utilisant une échelle, nous avons attribué des scores à chaque thème, ce qui nous a permis de générer des graphiques et des visuels de maturité.
          <br><br><br>
-         <div class="titleB">Recommendations</div><br>
-         Using the maturity assessment, we provided recommendations on how we, as Onepoint, would address areas for improvement if needed (maintaining what is already working well is also a good practice). From this, we outlined potential gains for each recommendation and provided an estimated timeline for implementation if the recommendations were acted upon immediately.
+         <div class="titleB">Recommandations</div><br>
+         En utilisant l'évaluation de la maturité, nous avons fourni des recommandations sur la manière dont nous, en tant que Onepoint, pourrions aborder les domaines à améliorer si nécessaire (maintenir ce qui fonctionne déjà bien est également une bonne pratique). À partir de cela, nous avons défini les gains potentiels pour chaque recommandation et fourni un calendrier estimé pour la mise en œuvre si les recommandations étaient appliquées au plus tôt.
          `
       }
    },
    {
-      "title": "Junior DevSecOps",
-      "type": "job - internship",
+      "title": "DevSecOps Junior",
+      "type": "travail - stage",
       "img": "alstom.png",
       "filters": ["devsecops", "ci/cd", "sysadmin"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         Internship at Alstom focused on automating the deployment of CSP (CyberSecurity Provider) modules, involving the exploration of network architecture and the development of a framework for automation scripts.
+         <div class="titleA">Résumé</div><br>
+         Le stage chez Alstom a été axé sur l'automatisation du déploiement des modules CSP (CyberSecurity Provider), impliquant l'exploration de l'architecture réseau et le développement d'un framework pour les scripts d'automatisation.
          <br><br>
-         - Explored network architecture involving CSP services like Active Directory, PKI, and Radius.<br>
-         - Developed a framework for automation scripts.<br>
-         - Implemented standards within the framework (logging, step-by-step execution).<br>
-         - Generated scripts in Python or PowerShell using the framework.
+         - Exploration de l'architecture réseau impliquant des services CSP tels qu'Active Directory, PKI et Radius.<br>
+         - Développement d'un framework pour les scripts d'automatisation.<br>
+         - Mise en œuvre de normes au sein du framework (journalisation, exécution pas à pas).<br>
+         - Génération de scripts en Python ou PowerShell en utilisant le framework.
          <br><br>
-         <div class="titleA">What I Did</div><br>
-         <div class="titleB">Deployment Automation</div><br>
-         The first task was to automate deployment. CSP provides a manual, hundreds of pages long, detailing how to deploy its modules, whether it's AD, Radius, PKI, or other components. Based on this manual, which specifies all explicit actions, I created Bash and PowerShell scripts to automate the process. This automation covered simple CLI command execution and actions within GUIs. Sometimes, the GUI had a CLI, and when it didn't, we had to contact the developer or reverse-engineer the software to determine how to automate it.
+         <div class="titleA">Ce que j'ai fait</div><br>
+         <div class="titleB">Automatisation du Déploiement</div><br>
+         La première tâche a été d'automatiser le déploiement. CSP fournit un manuel, long de centaines de pages, détaillant comment déployer ses modules, que ce soit AD, Radius, PKI ou d'autres composants. Sur la base de ce manuel, qui spécifie toutes les actions explicitement, j'ai créé des scripts Bash et PowerShell pour automatiser le processus. Cette automatisation couvrait l'exécution de commandes CLI simples et les actions au sein des interfaces graphiques. Parfois, l'interface graphique avait un CLI, et quand ce n'était pas le cas, nous devions contacter le développeur ou effectuer un reverse engineer du logiciel pour déterminer comment l'automatiser.
          <br><br><br>
-         <div class="titleB">Automation Framework Development</div><br>
-         During the deployment automation, we identified three main challenges:<br>
-         - CSP modules change every month or so, requiring regular updates to the automation.<br>
-         - Not all sysadmins have the skills to read and edit code.<br>
-         - The scripts lacked common libraries for regular actions, such as logging.
+         <div class="titleB">Développement du Framework d'Automatisation</div><br>
+         Lors de l'automatisation du déploiement, nous avons identifié trois principaux défis :<br>
+         - Les modules CSP changent tous les mois environ, nécessitant des mises à jour régulières de l'automatisation.<br>
+         - Tous les administrateurs système n'ont pas les compétences nécessaires pour lire et modifier du code.<br>
+         - Les scripts manquaient de bibliothèques communes pour les actions régulières, telles que la journalisation.
          <br><br>
-         To address these issues, I developed a Python framework that converts an English-like language into PowerShell and Python scripts. This framework acts as a compiler of sorts. It uses verbs as function callers; for example, "in some_file.txt write Hello World" would be converted to `File.append("some_file.txt", "Hello World")` in the scripts. Generally, it follows the syntax "<verb> <param> <verb2> <param2> [...]". The framework includes features for conditions, loops, and variables. It also has a dynamic command library stored in a JSON file, which can be edited by other developers to add more callable functions.
+         Pour répondre à ces problèmes, j'ai développé un framework en Python qui convertit un langage proche de l'anglais en scripts PowerShell et Python. Ce framework fonctionne comme un compilateur. Il utilise des verbes comme appelants de fonctions ; par exemple, "in some_file.txt write Hello World" serait converti en File.append("some_file.txt", "Hello World") dans les scripts. En général, il suit la syntaxe "<verbe> <param> <verbe2> <param2> [...]". Le framework comprend des fonctionnalités pour les conditions, les boucles et les variables. Il dispose également d'une bibliothèque de commandes dynamique stockée dans un fichier JSON, pouvant être modifiée par d'autres développeurs pour ajouter de nouvelles fonctions.
          <br><br>
-         Overall, the framework includes a normalization system, meaning the script handles console and file logs and operates with a common CLI that manages steps for partial or specific execution. Variables can be edited using a GUI built with Tkinter. This way, a compiled script generates its Python and PowerShell versions, along with data.csv and data.json files for setting up script variables. If a variable is not provided, the script prompts for it at the beginning.<br>
-         Two documentation sets were created: one explaining the framework itself, and another guiding users on how to create and compile scripts, along with an index of all available commands.
+         En résumé, le framework comprend un système de normalisation, ce qui signifie que le script gère les journaux de la console et des fichiers, et fonctionne avec un CLI commun qui gère les étapes pour une exécution partielle ou spécifique. Les variables peuvent être modifiées à l'aide d'une interface graphique construite avec Tkinter. Ainsi, un script compilé génère ses versions Python et PowerShell, ainsi que des fichiers data.csv et data.json pour la configuration des variables du script. Si une variable n'est pas fournie, le script demande cette variable au début de son exécution.<br>
+         Deux ensembles de documentation ont été créés : l'un expliquant le framework lui-même, et l'autre guidant les utilisateurs sur la manière de créer et de compiler des scripts, avec un répertoire de toutes les commandes disponibles.
          <br><br>
-         <div class="titleC">Features</div>
-         - OOP script framework allowing a common CLI between scripts<br>
-         - Logging system library and common logging code syntax<br>
-         - Natural-language compilation into Python and PowerShell scripts with accompanying CSV and JSON data sheets<br>
-         - Dynamic JSON dictionary to add new commands in the natural language<br>
-         - GUI to manage data sheets (CSV-JSON conversions, sheet encryption, filling the sheets, with simple features like integration of Ctrl shortcuts)
+         <div class="titleC">Fonctionnalités</div>
+         - Framework de script POO permettant un CLI commun entre les scripts<br>
+         - Bibliothèque de système de journalisation et syntaxe de code de journalisation commune<br>
+         - Compilation en langage naturel en scripts Python et PowerShell avec des feuilles de données CSV et JSON<br>
+         - Dictionnaire JSON dynamique pour ajouter de nouvelles commandes en langage naturel<br>
+         - Interface graphique pour gérer les feuilles de données (conversions CSV-JSON, cryptage des feuilles, remplissage des feuilles, avec des fonctionnalités simples telles que l'intégration des raccourcis Ctrl)
          `
       }
    },
    {
-      "title": "Building a full Information System",
-      "type": "project",
+      "title": "Créer un Système d'Information from scratch",
+      "type": "projet",
       "img": "master_project.png",
       "filters": ["devsecops", "ci/cd", "sysadmin", "audit"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         The "Master Project" is a collaborative project with 8 students during the first year of the Master's program at EFREI Paris. The cybersecurity-focused project was particularly demanding, requiring strong competencies in information systems. We were tasked with delivering a fully integrated information system, including components such as DNS, Web Server, Proxy, Active Directory, and Mail. Additionally, we had to adhere to audit protocols and cybersecurity processes.
+         <div class="titleA">Résumé</div><br>
+         Le "Master Project" est un projet collaboratif avec 8 étudiants au cours de la première année du programme de Master à l'EFREI Paris. Le projet, axé sur la cybersécurité, était particulièrement exigeant, nécessitant de solides compétences en systèmes d'information. Nous avons été chargés de livrer un système d'information entièrement intégré, comprenant des composants tels que DNS, serveur Web, proxy, Active Directory et Mail. De plus, nous devions respecter les protocoles d'audit et les processus de cybersécurité.
          <br><br>
-         <div class="titleA">What I Did</div><br>
-         <div class="titleB">Design of an Information System</div><br>
-         The first task was designing the information system. It included many features, such as public and private DNS, an AD with its RODC, a PKI, a website, a local webmail server, proxy and reverse proxy, a private file server, an EDR, and an ERP. We created three main zones: a DMZ, a Server zone, and a User zone. Each zone was further subdivided: DMZ-IN (reverse proxy and public DNS), DMZ-OUT (proxy and private DNS), DMZ-INOUT (MDA), DMZ-Technical (RODC); Server-services (web server, MDA, AD), Server-monitor (ERP, EDR), Server-data (File server, log server, and backup server), and Server-Critical (AD, Root CA).
+         <div class="titleA">Ce que j'ai fait</div><br>
+         <div class="titleB">Conception d'un Système d'Information</div><br>
+         La première tâche a été la conception du système d'information. Il comprenait de nombreuses fonctionnalités, telles que des DNS public et privé, un AD avec son RODC, une PKI, un site web, un serveur de mail local, un proxy et un reverse proxy, un serveur de fichiers privé, un EDR et un ERP. Nous avons créé trois zones principales : une DMZ, une zone Serveur et une zone Utilisateur. Chaque zone était subdivisée : DMZ-IN (reverse proxy et DNS public), DMZ-OUT (proxy et DNS privé), DMZ-INOUT (MDA), DMZ-Technique (RODC) ; Serveur-services (serveur web, MDA), Serveur-monitor (ERP, EDR), Serveur-données (serveur de fichiers, serveur de logs et serveur de backup), et Serveur-Critique (AD, root CA).
          <br><br><br>
-         <div class="titleB">Deployment in an ESX</div><br>
-         I personally set up the proxy and reverse proxy, the firewalls with IPS, and the entire DNS system with its records for non-AD related actions and the root CA. Due to time constraints, we could not deploy everything that was requested (and were not expected to do everything). As a result, the ERP, EDR, and backup server were not deployed.<br>
-         The proxy was configured as a Squid transparent proxy, meaning every internal web and DNS request would be routed through it, even if the proxy was not manually configured. The firewall filtered unnecessary packets using a well-constructed network matrix that indexed every destination reachable by a given source. Simple IPS rules were implemented. The DNS managed two domains: one private, managed by the AD and replicated in the DMZ-OUT by a cache DNS that also forwarded other requests to 8.8.8.8, and another public domain with records for accessing the website and mail server, including MX, SPF, and DKIM. Finally, the root CA was added as a trusted CA by the AD and signed the certificates for all TLS communications within the information system.
+         <div class="titleB">Déploiement dans un ESX</div><br>
+         J'ai personnellement configuré le proxy et le reverse proxy, les pare-feu avec IPS, l'ensemble du système DNS avec ses enregistrements pour les actions non liées à l'AD et le root CA. En raison des contraintes de temps, nous n'avons pas pu déployer tout ce qui était demandé (et nous n'étions pas censés tout faire). En conséquence, l'ERP, l'EDR et le serveur de sauvegarde n'ont pas été déployés.<br>
+         Le proxy a été configuré comme un transparent proxy par Squid, ce qui signifie que chaque requête Web et DNS interne serait routée à travers lui, même si le proxy n'était pas configuré manuellement. Le pare-feu filtrait les paquets inutiles à l'aide d'une matrice réseau bien construite qui indexait chaque destination accessible par une source donnée. Des règles IPS simples ont été mises en place sur les firewalls. Le DNS gérait deux domaines : un domaine privé, géré par l'AD et répliqué dans la DMZ-OUT par un DNS cache qui transmettait également les autres requêtes au 8.8.8.8, et un autre domaine public avec des enregistrements pour accéder au site Web et au serveur de messagerie, y compris MX, SPF et DKIM. Enfin, le root CA a été ajoutée comme CA de confiance par l'AD, et a signé les certificats pour toutes les communications TLS au sein du système d'information.
          <br><br><br>
-         <div class="titleB">Security Audit</div><br>
-         A part of the project involved auditing our infrastructure by conducting a risk analysis. We used a simple EBIOS RM for this purpose to track potential threats.<br>
-         Additionally, since the project involved multiple teams, it was possible to attempt attacks on other teams or defend against attacks from them or our teachers (following predetermined rules). This served as an effective stress test for our system and others.
+         <div class="titleB">Audit de Sécurité</div><br>
+         Une partie du projet a impliqué l'audit de notre infrastructure en réalisant une analyse des risques. Nous avons utilisé un EBIOS RM à cet effet pour suivre les menaces potentielles.<br>
+         De plus, comme le projet impliquait plusieurs équipes, il était possible de tenter des attaques sur d'autres équipes ou de défendre contre les attaques des autres, y compris nos enseignants (selon des règles prédéterminées). Cela a servi de test de résistance efficace pour notre système et celui des autres.
          `
       }
    },
    {
-      "title": "PenEnv - Bash Pentesting scripts",
-      "type": "project",
+      "title": "PenEnv - scripts Bash de Pentesting ",
+      "type": "projet",
       "img": "penenv.png",
       "filters": ["devsecops", "pentesting", "ci/cd"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         PenEnv is a personal project I created to prepare for the penetration testing certifications I am aiming to pass. Its purpose is to standardize the installation of a penetration testing environment on Linux, primarily through automation. Additionally, it aims to automate certain steps in the penetration testing process.
+         <div class="titleA">Résumé</div><br>
+         PenEnv est un projet personnel que j'ai créé pour me préparer aux certifications en tests de pénétration que je vise à obtenir. Son objectif est de standardiser l'installation d'un environnement de tests de pénétration sur Linux, principalement par le biais de l'automatisation. De plus, il vise à automatiser certaines étapes du processus de tests de pénétration.
          <br><br>
-         It is open-source and available on my GitHub: <a href="https://github.com/lLouu/Penenv" target="_blank">https://github.com/lLouu/Penenv</a>
+         Il est open-source et disponible sur mon GitHub : <a href="https://github.com/lLouu/Penenv" target="_blank">https://github.com/lLouu/Penenv</a>
          <br><br>
-         <div class="titleA">Features</div><br>
-         - One-liner installer<br>
-         - Installation of 112 penetration testing tools, including development languages, web scanning, brute-force tools, network tools, exploit libraries, reverse shell tools, and analysis and exploit scripts<br>
-         - Custom Bash tool to execute servers by putting their live, uncached input and output streams into readable and editable files, allowing easy management of automated interactions with background tasks<br>
-         - Custom Bash tools to facilitate basic tasks for limited-access reverse shells
+         <div class="titleA">Fonctionnalités</div><br>
+         - Installateur one-liner<br>
+         - Installation de 112 outils de tests de pénétration, incluant des langages de développement, des outils de scan web, des outils de brute-force, des outils réseau, des bibliothèques d'exploits, des outils de reverse shell, et des scripts d'analyse et d'exploit<br>
+         - Outil Bash personnalisé pour exécuter des serveurs en mettant leurs flux d'entrée et de sortie en temps réel et non mis en cache dans des fichiers lisibles et modifiables, permettant une gestion facile des interactions automatisées avec les tâches en arrière-plan<br>
+         - Outils Bash personnalisés pour faciliter les tâches de base pour les shells inversés avec accès limité
          `
       }
    },
    {
       "title": "Portfolio",
-      "type": "project",
+      "type": "projet",
       "img": "portfolio.png",
       "filters": ["devsecops", "ci/cd"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         My portfolio is the personal project you are currently viewing. The idea was to create a one-page portfolio that can be hosted on free-tier OVH hosting, which comes with a domain name. This is achieved by using only client-side technologies, including HTML, CSS, and JavaScript. I implemented several features, such as a theme manager, a dynamic content system for easily adding and removing content, a filter, local storage management to maintain consistent theme and filtering choices, and, of course, some frontend design.
+         <div class="titleA">Résumé</div><br>
+         Mon portfolio est le projet personnel que vous consultez actuellement. L'idée était de créer un portfolio d'une seule page pouvant être hébergé sur OVH en niveau gratuit, avec un nom de domaine inclus. Cela est réalisé en utilisant uniquement des technologies côté client, c'est-à-dire HTML, CSS et JavaScript. J'ai mis en œuvre plusieurs fonctionnalités, telles qu'un gestionnaire de thèmes, un système de contenu dynamique pour ajouter et supprimer facilement du contenu, un filtre, la gestion du stockage local pour maintenir des choix de thème et de filtrage cohérents, et bien sûr, un design frontend.
          <br><br>
-         It is open-source and available on my GitHub: <a href="https://github.com/lLouu/Portfolio" target="_blank">https://github.com/lLouu/Portfolio</a>
+         Il est open-source et disponible sur mon GitHub : <a href="https://github.com/lLouu/Portfolio" target="_blank">https://github.com/lLouu/Portfolio</a>
          <br><br>
-         <div class="titleA">Features</div><br>
-         - Fully client-side website (HTML, CSS & JS) without the use of frameworks<br>
-         - Light & Dark themes<br>
-         - Dynamic vignette content<br>
-         - Client-side filtering<br>
-         - Custom popups
+         <div class="titleA">Fonctionnalités</div><br>
+         - Site web entièrement côté client (HTML, CSS et JS) sans utilisation de frameworks<br>
+         - Thèmes clair et sombre<br>
+         - Contenu de vignettes dynamique<br>
+         - Filtrage côté client<br>
+         - Popups personnalisés
          `
       }
    },
@@ -174,9 +174,9 @@ let content = [
       "filters": ["sysadmin", "devsecops", "audit"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         I studied in EFREI Paris, a french school in IT, and I did a master in cybersecurity for information system and governance.
-         This means I got to learn many skills, from scripting to doing audit based on ISO methods such as EBIOS RM.
+         <div class="titleA">Résumé</div><br>
+         J'ai étudié à l'EFREI Paris, une école française spécialisée en informatique, et j'ai réalisé un master en cybersécurité des systèmes d'information et en gouvernance.
+         Cela signifie que j'ai acquis de nombreuses compétences, allant du scripting et de l'administration système à la réalisation d'audits basés sur des méthodes ISO telles qu'EBIOS RM.
          `
       }
    },
@@ -187,10 +187,9 @@ let content = [
       "filters": ["sysadmin", "cloud"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         A Digital Cloud Leader can highlight the features of key Google Cloud products and services,
-         as well as their benefits for businesses. They are also capable of describing common business
-         use cases and explaining how cloud solutions help businesses.
+         <div class="titleA">Résumé</div><br>
+         Un Digital Leader peut mettre en avant les caractéristiques des principaux produits et services Google Cloud,
+         ainsi que leurs avantages pour les entreprises. Il est également capable de décrire des cas d'utilisation courants et d'expliquer comment les solutions cloud aident les entreprises.
          `
       }
    },
@@ -201,10 +200,10 @@ let content = [
       "filters": ["sysadmin", "cloud"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         An AWS solutions architect develops, implements and maintains digital infrastructure and business applications within the AWS cloud platform. They collaborate with business leaders to learn more about a company's objectives and design effective cloud-based solutions and strategies to fulfill these objectives. Depending on a business's needs, an AWS solutions architect may recommend both software and hardware products for the organization to implement.
+         <div class="titleA">Résumé</div><br>
+         Un architecte de solutions AWS développe, met en œuvre et maintient l'infrastructure numérique et les applications métier au sein de la plateforme cloud AWS. Il collabore avec les dirigeants d'entreprise pour mieux comprendre les objectifs de l'entreprise et concevoir des solutions et des stratégies basées sur le cloud pour atteindre ces objectifs. En fonction des besoins de l'entreprise, un architecte de solutions AWS peut recommander à la fois des produits logiciels et matériels à mettre en œuvre dans l'organisation.
          <br><br>
-         Sadly, I got at the exam 690/1000 when validation was at 720, meaning i'm near the level of the certification.
+         Malheureusement, j'ai obtenu 690/1000 à l'examen alors que la validation était à 720, ce qui signifie que je suis proche du niveau requis de la certification.
          `
       }
    },
@@ -215,11 +214,11 @@ let content = [
       "filters": ["sysadmin", "cloud"],
       "content": {
          "all": `
-         <div class="titleA">Summary</div><br>
-         An Azure AZ-104 administrator is often part of a larger team dedicated to implementing an organization's cloud infrastructure.
-         They also coordinate with other roles to provide networking, security, database, application development, and Azure DevOps solutions.
+         <div class="titleA">Résumé</div><br>
+         Un administrateur Azure AZ-104 fait souvent partie d'une équipe plus large dédiée à la mise en œuvre de l'infrastructure cloud d'une organisation.
+         Il coordonne également avec d'autres rôles pour fournir des solutions en réseau, en sécurité, en base de données, en développement d'applications et en Azure DevOps.
          <br><br>
-         Sadly, I got at the exam 674/1000 when validation was at 700, meaning i'm near the level of the certification.
+         Malheureusement, j'ai obtenu 674/1000 à l'examen alors que la validation était à 700, ce qui signifie que je suis proche du niveau requis de la certification.
          `
       }
    },
