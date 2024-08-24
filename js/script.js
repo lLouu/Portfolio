@@ -200,7 +200,7 @@ const roleswitcher = async () => {
    }
 }
 
-window.onload = () => {
+const loader = () => {
    updateScreenSize_noreload();
    if (null == window.localStorage.getItem('theme')) { window.localStorage.setItem('theme', 'dark'); }
    updatetheme();
@@ -211,4 +211,5 @@ window.onload = () => {
    while (null == content) { }
    load_vignettes();
 }
+document.addEventListener('DOMContentLoaded', loader);
 
