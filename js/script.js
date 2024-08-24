@@ -8,7 +8,7 @@ const changetheme = () => {
    updatetheme();
 }
 
-const updatetheme = () => {
+const updatetheme = async () => {
    if (window.localStorage.getItem('theme') == 'light') {
       document.getElementById("theme").href = "css/light.css";
       let button = document.getElementById("theme-button");
@@ -30,7 +30,7 @@ const changechoice = (new_choice) => {
    load_vignettes();
 }
 
-const updatechoicemenu = () => {
+const updatechoicemenu = async () => {
    document.getElementsByClassName('selected')[0].setAttribute('class', '');
    document.getElementById(window.sessionStorage.getItem('choice')).setAttribute('class', 'selected');
 }
@@ -76,7 +76,7 @@ const normal_size = () => {
 };
 
 let line_number;
-function updateScreenSize() {
+const updateScreenSize_noreload = async () => {
    if (window.matchMedia("(max-width: 400px)").matches) {
       line_number = 1;
       reduced_style();
@@ -88,6 +88,10 @@ function updateScreenSize() {
    } else {
       line_number = 5;
    }
+   load_vignettes();
+}
+const updateScreenSize = async () => {
+   updateScreenSize_noreload();
    load_vignettes();
 }
 window.matchMedia("(max-width: 400px)").addEventListener('change', updateScreenSize);
@@ -135,7 +139,7 @@ const clear_vignettes = () => {
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const load_vignettes = () => {
+const load_vignettes = async () => {
    let content_container = document.getElementById("content");
    content_container.style.opacity = "0";
    let y = 0.4 * document.documentElement.clientHeight + document.getElementById('header').offsetHeight + document.getElementById('landing').offsetHeight + document.getElementById('about').offsetHeight;
@@ -195,12 +199,13 @@ const roleswitcher = () => {
 }
 
 window.onload = () => {
-   while (null == content) { }
+   updateScreenSize_noreload();
    if (null == window.localStorage.getItem('theme')) { window.localStorage.setItem('theme', 'dark'); }
-   updatetheme();
    if (null == window.sessionStorage.getItem('choice')) { window.sessionStorage.setItem('choice', 'all'); }
+   updatetheme();
    updatechoicemenu();
-   updateScreenSize();
+   while (null == content) { }
+   load_vignettes()
    roleswitcher();
 }
 
