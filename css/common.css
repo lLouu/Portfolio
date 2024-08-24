@@ -38,6 +38,44 @@ a:hover:not(.selected) {
    margin-right: 10px;
 }
 
+#landing-title {
+   margin-top: 15vh;
+   margin-bottom: 12.5vh;
+   margin-left: 15%;
+   font-size: 1.8rem;
+   font-weight: bold;
+}
+
+.scroll {
+   color: var(--important);
+   font-weight: bolder;
+   animation: scroll 5s linear;
+}
+
+@keyframes scroll {
+   0% {
+      position: relative;
+      top: -2rem;
+      opacity: 0;
+   }
+
+   10% {
+      top: 0;
+      opacity: 1;
+   }
+
+   90% {
+      top: 0;
+      opacity: 1;
+   }
+
+   100% {
+      position: relative;
+      top: 2rem;
+      opacity: 0;
+   }
+}
+
 #choices>div>a {
    margin-right: 25px;
    padding-top: 5px;
@@ -73,6 +111,7 @@ a:hover:not(.selected) {
 #menu {
    position: sticky;
    top: -1px;
+   z-index: 1000;
    padding-top: 2vh;
    padding-bottom: 2vh;
    background-color: var(--bg);
@@ -104,6 +143,7 @@ a:hover:not(.selected) {
    width: 100%;
    height: 100vh;
    background: var(--blur);
+   z-index: 2000;
 }
 
 #popup-container {
