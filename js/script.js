@@ -78,17 +78,18 @@ const normal_size = () => {
 let line_number;
 const updateScreenSize_noreload = async () => {
    if (window.matchMedia("(max-width: 400px)").matches) {
-      line_number = 1;
       reduced_style();
+      line_number = 1;
    } else if (window.matchMedia("(min-width: 401px) and (max-width: 600px)").matches) {
-      line_number = 2;
       normal_size();
+      line_number = 2;
    } else if (window.matchMedia("(min-width: 601px) and (max-width: 1024px)").matches) {
+      normal_size();
       line_number = 3;
    } else {
+      normal_size();
       line_number = 5;
    }
-   load_vignettes();
 }
 const updateScreenSize = async () => {
    updateScreenSize_noreload();
@@ -149,7 +150,8 @@ const load_vignettes = async () => {
    sleep(100).then(() => {
       clear_vignettes();
       for (let i = 0; i < content.length; i++) {
-         if (window.sessionStorage.getItem('choice') == 'all' || content[i].filters.includes(window.sessionStorage.getItem('choice'))) {
+         let c = window.sessionStorage.getItem('choice');
+         if (c == 'all' || content[i].filters.includes(c)) {
             createvignette(content[i].title, content[i].type, content[i].img, i);
          }
       }
@@ -184,28 +186,29 @@ const withdraw_popup = () => {
 }
 
 let i = 0;
-const roleswitcher = () => {
-   sleep(5000).then(() => {
-      let l = document.getElementById('landing-title');
+const roleswitcher = async () => {
+   let l = document.getElementById('landing-title');
+   while (1) {
       let n = document.createElement('span');
       n.classList.add('scroll');
-      i += 1;
-      i = i % roles.length;
       n.innerHTML = roles[i];
       l.removeChild(l.childNodes[1]);
       l.appendChild(n);
-      roleswitcher();
-   });
+      i += 1;
+      i = i % roles.length;
+      await sleep(5000)
+   }
 }
 
 window.onload = () => {
    updateScreenSize_noreload();
    if (null == window.localStorage.getItem('theme')) { window.localStorage.setItem('theme', 'dark'); }
-   if (null == window.sessionStorage.getItem('choice')) { window.sessionStorage.setItem('choice', 'all'); }
    updatetheme();
+   if (null == window.sessionStorage.getItem('choice')) { window.sessionStorage.setItem('choice', 'all'); }
    updatechoicemenu();
-   while (null == content) { }
-   load_vignettes()
+   while (null == roles) { }
    roleswitcher();
+   while (null == content) { }
+   load_vignettes();
 }
 
