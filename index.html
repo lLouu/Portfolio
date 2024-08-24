@@ -27,14 +27,14 @@
    <script src="js/script.js"></script>
 </head>
 
-<body class="flex center">
-   <div class="flex column center" id="main-box"> <!-- center horizontally -->
+<body class="flex column center">
+   <div class="flex center" id="main-box"> <!-- center horizontally -->
       <div id="main"> <!-- center vertically -->
          <div class="flex between" id="header">
             <div class="flex column between"> <!-- Left -->
                <div class="important" id="title">Guerric Le Bihan</div>
                <div id="contact">
-                  <a href="mailto:contact@guerriclebihan.com" target="_blank">Email</a>
+                  <a href="mailto:contact@guerriclebihan.com">Email</a>
                   <a href="https://www.linkedin.com/in/guerric-le-bihan" target="_blank">LinkedIn</a>
                   <a href="CV Guerric Le Bihan 2024.pdf" target="_blank">CV</a>
                </div>
@@ -79,8 +79,27 @@
                </div>
             </div>
             <div class="flex column" id="content"></div>
+            <div id="infos" class="flex column center">
+               <div id="infos-title" class="important">Le Saviez-Vous ?</div>
+               <div>
+                  Ce site internet a été fait from scratch, sans framework et le tout en client-side. Toutes les
+                  fonctionnalitées ont étées codée à la main.<br>
+                  Le projet est open source et disponible sur Github
+               </div>
+               <a href="https://github.com/lLouu/Portfolio" target="_blank" class="flex center">
+                  <img src="img/github_icon.png" width="24x24">
+                  <div>Voir le Projet</div>
+               </a>
+            </div>
          </div>
       </div>
+   </div>
+   <div id="footer" class="flex just-center">
+      <a href="mailto:contact@guerriclebihan.com"><img width="24x24" src="img/mail_icon.png"></a>
+      <a href="CV Guerric Le Bihan 2024.pdf" target="_blank"><img width="24x24" src="img/cv_icon.png"></a>
+      <a href="https://www.linkedin.com/in/guerric-le-bihan/" target="_blank"><img width="24x24"
+            src="img/linkedin_icon.png"></a>
+      <a href="https://github.com/lLouu" target="_blank"><img width="24x24" src="img/github_icon.png"></a>
    </div>
    <div id="popup" class="flex center">
       <div id="popup-container" class="flex column center">

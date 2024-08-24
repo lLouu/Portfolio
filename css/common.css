@@ -24,7 +24,6 @@ a:hover:not(.selected) {
 }
 
 #main-box {
-   width: calc(100vw - 16.5px);
    margin-top: 10vh;
    margin-bottom: 5vh;
 }
@@ -183,6 +182,49 @@ a:hover:not(.selected) {
    overflow-y: auto;
    scrollbar-width: thin;
    scrollbar-color: var(--important) rgba(0, 0, 0, 0);
+}
+
+#infos {
+   text-align: center;
+   margin-top: 10vh;
+}
+
+#infos>* {
+   margin-top: 15px;
+}
+
+#infos>a {
+   height: 24px;
+   background-color: var(--bg-bis);
+   border-radius: 12px;
+   padding: 2.5px 10px;
+   text-align: center;
+   transition: background-color 0.1s linear;
+}
+
+#infos>a:hover {
+   background-color: var(--important);
+   color: var(--bg);
+   font-weight: bold;
+}
+
+#footer {
+   width: 100%;
+   background-color: var(--bg-bis);
+   padding: 3vh 0;
+}
+
+#footer>a>img {
+   filter: opacity(0.5);
+   transition: filter 0.1s linear;
+   margin: 10px;
+   padding: 4px;
+   border-radius: 20px;
+   border: 3px solid var(--text);
+}
+
+#footer>a>img:hover {
+   filter: opacity(1);
 }
 
 .theme-selected {
