@@ -2,7 +2,7 @@ body {
    min-height: 100vh;
    background-color: var(--bg);
    color: var(--text);
-   font: 0.9rem "Verdana", sans-serif;
+   font: 1rem "Poppins", sans-serif;
    transition: background-color 0.2s linear;
 }
 
@@ -24,7 +24,6 @@ a:hover:not(.selected) {
 }
 
 #main-box {
-   width: calc(100vw - 16.5px);
    margin-top: 10vh;
    margin-bottom: 5vh;
 }
@@ -36,6 +35,44 @@ a:hover:not(.selected) {
 
 #contact>a {
    margin-right: 10px;
+}
+
+#landing-title {
+   margin-top: 15vh;
+   margin-bottom: 12.5vh;
+   margin-left: 15%;
+   font-size: 1.8rem;
+   font-weight: bold;
+}
+
+.scroll {
+   color: var(--important);
+   font-weight: bolder;
+   animation: scroll 5s linear;
+}
+
+@keyframes scroll {
+   0% {
+      position: relative;
+      top: -2rem;
+      opacity: 0;
+   }
+
+   10% {
+      top: 0;
+      opacity: 1;
+   }
+
+   90% {
+      top: 0;
+      opacity: 1;
+   }
+
+   100% {
+      position: relative;
+      top: 2rem;
+      opacity: 0;
+   }
 }
 
 #choices>div>a {
@@ -53,6 +90,7 @@ a:hover:not(.selected) {
 
 #about {
    width: 60%;
+   min-width: 265px;
 }
 
 #content {
@@ -73,6 +111,7 @@ a:hover:not(.selected) {
 #menu {
    position: sticky;
    top: -1px;
+   z-index: 1000;
    padding-top: 2vh;
    padding-bottom: 2vh;
    background-color: var(--bg);
@@ -104,6 +143,7 @@ a:hover:not(.selected) {
    width: 100%;
    height: 100vh;
    background: var(--blur);
+   z-index: 2000;
 }
 
 #popup-container {
@@ -114,7 +154,7 @@ a:hover:not(.selected) {
    width: 60%;
    max-height: 90vh;
    background-color: var(--bg);
-   border-radius: 5vh;
+   border-radius: 7.5px;
    padding-bottom: 5vh;
    transition: background-color 0.2s linear;
 }
@@ -144,6 +184,49 @@ a:hover:not(.selected) {
    scrollbar-color: var(--important) rgba(0, 0, 0, 0);
 }
 
+#infos {
+   text-align: center;
+   margin-top: 10vh;
+}
+
+#infos>* {
+   margin-top: 15px;
+}
+
+#infos>a {
+   height: 24px;
+   background-color: var(--bg-bis);
+   border-radius: 12px;
+   padding: 2.5px 10px;
+   text-align: center;
+   transition: background-color 0.1s linear;
+}
+
+#infos>a:hover {
+   background-color: var(--important);
+   color: var(--bg);
+   font-weight: bold;
+}
+
+#footer {
+   width: 100%;
+   background-color: var(--bg-bis);
+   padding: 3vh 0;
+}
+
+#footer>a>img {
+   filter: opacity(0.5);
+   transition: filter 0.1s linear;
+   margin: 10px;
+   padding: 4px;
+   border-radius: 20px;
+   border: 3px solid var(--text);
+}
+
+#footer>a>img:hover {
+   filter: opacity(1);
+}
+
 .theme-selected {
    background-color: var(--important);
 }
@@ -170,9 +253,8 @@ a:hover:not(.selected) {
    width: 150px;
    height: 240px;
    background-color: var(--bg-bis);
-   border-radius: 20px;
+   border-radius: 12px;
    margin: 10px;
-   box-shadow: 3px 3px 5px var(--blur);
 }
 
 .vignette-type {
@@ -190,7 +272,7 @@ a:hover:not(.selected) {
    margin-top: 10px;
    width: 120px;
    height: 120px;
-   border-radius: 20px;
+   border-radius: 7.5px;
 }
 
 .vignette>div {
@@ -202,7 +284,7 @@ a:hover:not(.selected) {
    font-size: 0.8rem;
    font-weight: bold;
    color: var(--important);
-   margin-bottom: 5px;
+   margin-bottom: 10px;
 }
 
 .flex {

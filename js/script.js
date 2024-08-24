@@ -138,7 +138,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const load_vignettes = () => {
    let content_container = document.getElementById("content");
    content_container.style.opacity = "0";
-   let y = 0.2 * document.documentElement.clientHeight + document.getElementById('header').offsetHeight + document.getElementById('about').offsetHeight;
+   let y = 0.4 * document.documentElement.clientHeight + document.getElementById('header').offsetHeight + document.getElementById('landing').offsetHeight + document.getElementById('about').offsetHeight;
    if (window.scrollY > y) {
       scrollTo(0, y);
    }
@@ -179,6 +179,21 @@ const withdraw_popup = () => {
    document.getElementById("popup").style.display = "none";
 }
 
+let i = 0;
+const roleswitcher = () => {
+   sleep(5000).then(() => {
+      let l = document.getElementById('landing-title');
+      let n = document.createElement('span');
+      n.classList.add('scroll');
+      i += 1;
+      i = i % roles.length;
+      n.innerHTML = roles[i];
+      l.removeChild(l.childNodes[1]);
+      l.appendChild(n);
+      roleswitcher();
+   });
+}
+
 window.onload = () => {
    while (null == content) { }
    if (null == window.localStorage.getItem('theme')) { window.localStorage.setItem('theme', 'dark'); }
@@ -186,5 +201,6 @@ window.onload = () => {
    if (null == window.sessionStorage.getItem('choice')) { window.sessionStorage.setItem('choice', 'all'); }
    updatechoicemenu();
    updateScreenSize();
+   roleswitcher();
 }
 

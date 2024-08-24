@@ -1,4 +1,5 @@
 const see_more_str = "See more →"
+const roles = ["System Admin", "DevSecOps", "CI/CD Engineer", "Cybersecurity Auditor"]
 const content = [
    {
       "title": "Junior Architect",
