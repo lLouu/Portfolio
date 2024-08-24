@@ -2,7 +2,7 @@ body {
    min-height: 100vh;
    background-color: var(--bg);
    color: var(--text);
-   font: 0.9rem "Verdana", sans-serif;
+   font: 1rem "Poppins", sans-serif;
    transition: background-color 0.2s linear;
 }
 
@@ -91,6 +91,7 @@ a:hover:not(.selected) {
 
 #about {
    width: 60%;
+   min-width: 265px;
 }
 
 #content {
@@ -154,7 +155,7 @@ a:hover:not(.selected) {
    width: 60%;
    max-height: 90vh;
    background-color: var(--bg);
-   border-radius: 5vh;
+   border-radius: 7.5px;
    padding-bottom: 5vh;
    transition: background-color 0.2s linear;
 }
@@ -210,9 +211,8 @@ a:hover:not(.selected) {
    width: 150px;
    height: 240px;
    background-color: var(--bg-bis);
-   border-radius: 20px;
+   border-radius: 12px;
    margin: 10px;
-   box-shadow: 3px 3px 5px var(--blur);
 }
 
 .vignette-type {
@@ -230,7 +230,7 @@ a:hover:not(.selected) {
    margin-top: 10px;
    width: 120px;
    height: 120px;
-   border-radius: 20px;
+   border-radius: 7.5px;
 }
 
 .vignette>div {
@@ -242,7 +242,7 @@ a:hover:not(.selected) {
    font-size: 0.8rem;
    font-weight: bold;
    color: var(--important);
-   margin-bottom: 5px;
+   margin-bottom: 10px;
 }
 
 .flex {

@@ -1,8 +1,8 @@
 :root {
    --inv: rgba(0, 0, 0, 0);
    --blur: rgba(255, 255, 255, 0.9);
-   --bg: #E0E3FF;
-   --bg-bis: #FFFFFF;
+   --bg: #FFFFFF;
+   --bg-bis: #f0f1fd;
    --text: #000000;
    --sub-text: #525760;
    --hover: #313439;
