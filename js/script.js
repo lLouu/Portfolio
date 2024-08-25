@@ -8,7 +8,7 @@ const changetheme = () => {
    updatetheme();
 }
 
-const updatetheme = () => {
+const updatetheme = async () => {
    if (window.localStorage.getItem('theme') == 'light') {
       document.getElementById("theme").href = "css/light.css";
       let button = document.getElementById("theme-button");
@@ -30,7 +30,7 @@ const changechoice = (new_choice) => {
    load_vignettes();
 }
 
-const updatechoicemenu = () => {
+const updatechoicemenu = async () => {
    document.getElementsByClassName('selected')[0].setAttribute('class', '');
    document.getElementById(window.sessionStorage.getItem('choice')).setAttribute('class', 'selected');
 }
@@ -76,18 +76,23 @@ const normal_size = () => {
 };
 
 let line_number;
-function updateScreenSize() {
+const updateScreenSize_noreload = async () => {
    if (window.matchMedia("(max-width: 400px)").matches) {
-      line_number = 1;
       reduced_style();
+      line_number = 1;
    } else if (window.matchMedia("(min-width: 401px) and (max-width: 600px)").matches) {
-      line_number = 2;
       normal_size();
+      line_number = 2;
    } else if (window.matchMedia("(min-width: 601px) and (max-width: 1024px)").matches) {
+      normal_size();
       line_number = 3;
    } else {
+      normal_size();
       line_number = 5;
    }
+}
+const updateScreenSize = async () => {
+   updateScreenSize_noreload();
    load_vignettes();
 }
 window.matchMedia("(max-width: 400px)").addEventListener('change', updateScreenSize);
@@ -135,7 +140,7 @@ const clear_vignettes = () => {
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const load_vignettes = () => {
+const load_vignettes = async () => {
    let content_container = document.getElementById("content");
    content_container.style.opacity = "0";
    let y = 0.4 * document.documentElement.clientHeight + document.getElementById('header').offsetHeight + document.getElementById('landing').offsetHeight + document.getElementById('about').offsetHeight;
@@ -145,7 +150,8 @@ const load_vignettes = () => {
    sleep(100).then(() => {
       clear_vignettes();
       for (let i = 0; i < content.length; i++) {
-         if (window.sessionStorage.getItem('choice') == 'all' || content[i].filters.includes(window.sessionStorage.getItem('choice'))) {
+         let c = window.sessionStorage.getItem('choice');
+         if (c == 'all' || content[i].filters.includes(c)) {
             createvignette(content[i].title, content[i].type, content[i].img, i);
          }
       }
@@ -180,27 +186,30 @@ const withdraw_popup = () => {
 }
 
 let i = 0;
-const roleswitcher = () => {
-   sleep(5000).then(() => {
-      let l = document.getElementById('landing-title');
+const roleswitcher = async () => {
+   let l = document.getElementById('landing-title');
+   while (1) {
       let n = document.createElement('span');
       n.classList.add('scroll');
-      i += 1;
-      i = i % roles.length;
       n.innerHTML = roles[i];
       l.removeChild(l.childNodes[1]);
       l.appendChild(n);
-      roleswitcher();
-   });
+      i += 1;
+      i = i % roles.length;
+      await sleep(5000)
+   }
 }
 
-window.onload = () => {
-   while (null == content) { }
+const loader = () => {
+   updateScreenSize_noreload();
    if (null == window.localStorage.getItem('theme')) { window.localStorage.setItem('theme', 'dark'); }
    updatetheme();
    if (null == window.sessionStorage.getItem('choice')) { window.sessionStorage.setItem('choice', 'all'); }
    updatechoicemenu();
-   updateScreenSize();
+   while (null == roles) { }
    roleswitcher();
+   while (null == content) { }
+   load_vignettes();
 }
+document.addEventListener('DOMContentLoaded', loader);
 
