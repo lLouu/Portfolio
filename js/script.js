@@ -118,7 +118,11 @@ const createvignette = (title, type, img, skills, desc, ind) => {
    illustration.setAttribute('src', `img/${img}`);
    vignette.appendChild(illustration);
    let title_ele = document.createElement('div');
-   title_ele.innerHTML = title;
+   title_ele.classList = "flex center"
+   title_ele.style.height = "60px";
+   let inner_title_ele = document.createElement('div');
+   inner_title_ele.innerHTML = title;
+   title_ele.appendChild(inner_title_ele);
    vignette.appendChild(title_ele);
    let type_ele = document.createElement('div');
    type_ele.innerHTML = type;
