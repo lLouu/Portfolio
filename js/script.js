@@ -102,7 +102,7 @@ window.matchMedia("(min-width: 1025px)").addEventListener('change', updateScreen
 
 let n_vignette = 0;
 // Type being either certification, project, study or account
-const createvignette = (title, type, img, ind) => {
+const createvignette = (title, type, img, skills, desc, ind) => {
    let content_container = document.getElementById("content");
    if (n_vignette % line_number == 0) {
       // Create new line container
@@ -124,6 +124,23 @@ const createvignette = (title, type, img, ind) => {
    type_ele.innerHTML = type;
    type_ele.classList = "vignette-type";
    vignette.appendChild(type_ele);
+   let skill_ele = document.createElement('div');
+   skill_ele.classList = "skill-container";
+   skill_ele.style.fontSize = "0.75em"
+   skill_ele.style.fontWeight = "500"
+   for (let i = 0; i < skills.length; i++) {
+      let box_ele = document.createElement('span');
+      box_ele.classList = "skill-box";
+      box_ele.innerHTML = skills[i] + ' ';
+      box_ele.style.backgroundColor = "var(--important)";
+      box_ele.style.padding = "0.05em 4px"
+      skill_ele.appendChild(box_ele);
+   }
+   vignette.appendChild(skill_ele);
+   let desc_ele = document.createElement('div');
+   desc_ele.innerHTML = desc;
+   desc_ele.classList = "vignette-desc"
+   vignette.appendChild(desc_ele)
    let see_more = document.createElement('a');
    see_more.innerHTML = see_more_str;
    if (type == 'account' || type == 'compte') { see_more.href = content[ind].links; see_more.target = "_blank"; }
@@ -152,7 +169,7 @@ const load_vignettes = async () => {
       for (let i = 0; i < content.length; i++) {
          let c = window.sessionStorage.getItem('choice');
          if (c == 'all' || content[i].filters.includes(c)) {
-            createvignette(content[i].title, content[i].type, content[i].img, i);
+            createvignette(content[i].title, content[i].type, content[i].img, 'content' in content[i] ? (c in content[i].content.vignette_skills ? content[i].content.vignette_skills[c] : content[i].content.vignette_skills.all) : [], content[i].desc, i);
          }
       }
       content_container.style.opacity = "1";
@@ -162,15 +179,63 @@ const load_vignettes = async () => {
    });
 }
 
-const gen_popup = (ind) => {
-   document.getElementById("popup-content").innerHTML = content[ind].content[window.sessionStorage.getItem('choice')];
-   if ("undefined" == document.getElementById("popup-content").innerHTML) {
-      document.getElementById("popup-content").innerHTML = content[ind].content['all'];
+const gen_popup_html = (obj) => {
+   let ret = `<div class="titleA">${obj.title}</div>`
+
+   ret += `<div class="skill-container">`
+
+   keys = Object.keys(obj.content.skills)
+
+   for (let i = 0; i < keys.length; i++) {
+      let skills = obj.content.skills[keys[i]];
+      for (let j = 0; j < skills.length; j++) {
+         ret += `<span class="skill-box" style="background-color: ${label_color[keys[i]]};">${skills[j]}</span> `
+      }
    }
+   ret += `</div><br>`
+
+   ret += `
+      <div class="titleB">${popup_const.board}</div>
+      <span class="titleC">${popup_const.objective} :</span> ${obj.content.board.objective}<br>
+      <span class="titleC">${popup_const.stakes} :</span> ${obj.content.board.stakes}<br>`
+
+   if ("team" in obj.content.board) {
+      ret += `<br><span class="titleC">${popup_const.team} :</span><br>`
+
+      for (let i = 0; i < obj.content.board.team.length; i++) {
+         ret += ` - ${obj.content.board.team[i]}<br>`
+      }
+   }
+
+   if ("deliverables" in obj.content.board) {
+      ret += `<br><span class="titleC">${popup_const.deliverables} :</span><br>`;
+
+      for (let i = 0; i < obj.content.board.deliverables.length; i++) {
+         ret += ` - ${obj.content.board.deliverables[i]}<br>`
+      }
+   }
+
+   ret += `
+      <br><br><div class="titleB">${popup_const.contribution}</div><br>
+      ${obj.content.contribution}
+      <br><br><div class="titleB">${popup_const.results}</div><br>
+      ${obj.content.results}
+   `
+
+   return ret;
+}
+
+const popup_change_size = (e) => {
+   let popup = document.getElementById("popup");
+   popup.setAttribute('style', `top: ${window.scrollY}px; display: flex; `);
+}
+
+const gen_popup = (ind) => {
+   document.getElementById("popup-content").innerHTML = gen_popup_html(content[ind]);
    let popup = document.getElementById("popup");
    let popup_container = document.getElementById("popup-container");
    document.body.style.overflow = 'hidden';
-   popup.setAttribute('style', `top: ${window.scrollY}px; display: flex;`)
+   popup.setAttribute('style', `top: ${window.scrollY}px; display: flex; `);
    const handler = (e) => {
       if (e.target == popup || e.target == popup_container) {
          withdraw_popup();
@@ -178,11 +243,14 @@ const gen_popup = (ind) => {
       }
    }
    popup.addEventListener('click', handler);
+
+   window.matchMedia("*").addEventListener('change', popup_change_size);
 }
 
 const withdraw_popup = () => {
    document.body.style.overflow = 'auto';
    document.getElementById("popup").style.display = "none";
+   window.matchMedia("*").removeEventListener('change', popup_change_size);
 }
 
 let i = 0;
