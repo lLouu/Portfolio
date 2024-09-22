@@ -1,230 +1,410 @@
 const see_more_str = "See more →"
 const roles = ["System Admin", "DevSecOps", "CI/CD Engineer", "Cybersecurity Auditor"]
+const popup_const = {
+   "board": "Key points",
+   "objective": "Objective",
+   "stakes": "Stakes",
+   "team": "Team",
+   "deliverables": "Deliverables",
+   "contribution": "My Contribution",
+   "results": "Results"
+}
+
 const content = [
    {
       "title": "Junior Architect",
       "type": "job - internship",
       "img": "onepoint.png",
+      "desc": "Design of a method for the migration of Authorization Servers",
       "filters": ["sysadmin", "ci/cd", "audit", "cloud"],
       "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         During this internship at Onepoint, I conducted research on the migration of Authorization Server APIs, proposed an architectural approach, and executed a POC with Keycloak, Okta, and Apigee.
-         <br><br>
-         - In-depth study of authorization systems (SAML, OAuth, OIDC) and existing market solutions.<br>
-         - Proposed a migration readiness approach with governance support to ensure availability and confidentiality.<br>
-         - Executed a POC involving Keycloak, Okta, Apigee, OpenLDAP, WordPress, and Squid Proxy.
-         <br><br>
-         <div class="titleA">What I Did</div><br>
-         <div class="titleB">Creation of a Migration Method</div><br>
-         Migrating an authorization server involves risking the confidentiality of every dependent application and their availability. It is important to establish a governance framework to minimize the risks associated with this type of migration. For this purpose, I created a directive document that includes guidelines on rationalizing migration choices, selecting the best options, defining a migration policy according to the SLO, and providing a good pattern for protocolization to facilitate automation and a smooth step-by-step migration process.
-         <br><br>
-         <div class="titleC">Features</div>
-         - Method to identify client biases and understand the stakes<br>
-         - Method to prioritize stakes based on objective cost for the client and biases<br>
-         - Method to identify the architecture implicated by the stakes<br>
-         - Method to assign a score to each proposed modification based on its cost and projected results, and filter them accordingly<br>
-         - Method to produce a robust protocol, automate it, and execute it
-         <br><br><br>
-         <div class="titleB">Creation of a Sandbox for a PoC</div><br>
-         To demonstrate how the migration method works, I created a sandbox of 7 VMs that simulate a simple information system. This system includes two pfSense instances, a user workstation, an OpenLDAP server, a Keycloak server, a WordPress instance, an Nginx server used as a reverse proxy, and a Squid proxy. I set up various authorization scenarios, from a simple LDAP authorization using Squid Proxy, LDAP synchronization between OpenLDAP and Keycloak, to OAuth connections on WordPress using Keycloak and a WordPress add-on.
-         <br><br><br>
-         <div class="titleB">Study of Technology and Analysis of Existing Market Solutions</div><br>
-         To complete the overall task, I needed to gather extensive data. The first step was to obtain documents about authorization servers. I collected numerous external sources using blogs, cybersecurity public institutions, and Google Scholar. From this data, I learned the basics of how SAML, OAuth, and OIDC work and differ. I also explored recommendations that may be overly stringent in most cases, as well as more unconventional practices for mitigating issues, such as reducing a service's dependency on its identity provider.
-         <br><br>
-         Another type of data involved existing solutions for API Managers, Authorization Servers, and Integration Platforms as a Service (iPaaS). I first compiled a list of solutions using Gartner's Magic Quadrant and some top blog recommendations from the internet. Afterward, I checked their popularity to determine which ones were most likely to be encountered in practice with clients.
-         `
+         "board": {
+            "objective": "Create a migration method for API authorization servers, whether to change platforms (e.g., move to the cloud), software, or authentication method (e.g., SAML, OAuth, OIDC).",
+            "stakes": "This method will serve as the basis for missions involving integration or migration of authorization servers for Onepoint clients.",
+            "team": ["A senior solutions architecture consultant", "Myself, junior architect"],
+            "deliverables": ["The method manual", "A virtual sandbox environment", "PowerPoint and Excel support for the different steps of the method"]
+         },
+         "contribution": `
+            <div class="titleC">Framing</div>
+            First, it was necessary to frame the subject. This was achieved by understanding the stakes, and thus:<br>
+            - Research documents on Google Scholar<br>
+            - Search for recommendations from specialized government agencies, such as ANSSI<br>
+            - Analyze the various existing solutions on the market, their market share, and user satisfaction to deduce the solutions likely to be encountered<br>
+            <br>
+            <div class="titleC">Method Design</div>
+            The method is based on the desire to address the main challenges: preserving availability, integrity, confidentiality, and non-repudiation as much as possible; providing a rational return on investment; enabling fast execution.<br>
+            Therefore, it is client-focused and consists of four steps:<br>
+            - Deduce the client's specific challenges, and assess them<br>
+            - Identify which migrations can be carried out and determine their return on investment to choose which ones to implement<br>
+            - Define migration policies, SLOs to be maintained during migration, and create a migration protocol based on a model facilitating traceability, checks, and rollbacks<br>
+            - Communicate, apply, and verify the migration<br>
+            <br>
+            <div class="titleC">Setting up the Sandbox Environment</div>
+            To test the method, it was necessary to create a sandbox environment. This environment consists of 8 virtual machines, including an unmaintained version of Keycloak and an OpenLDAP. This environment has 2 authentication flows:<br>
+            - OAuth authentication from a WordPress to the Keycloak<br>
+            - LDAP authentication from a Squid proxy to the OpenLDAP<br>
+            <br></div>
+            It is then possible to test the method within the context of various migrations, such as:<br>
+            - Upgrading the major version of Keycloak<br>
+            - Migrating Keycloak to the cloud with Okta<br>
+            - Changing the LDAP flow to an OAuth flow<br>
+         `,
+         "skills": {
+            "comp": ["Migration", "Automation", "IAM", "Governance"],
+            "dev": ["Bash"],
+            "tools": ["PlantUML", "VirtualBox"],
+            "softwares": ["Linux", "Keycloak", "Okta", "OpenLDAP", "Squid Proxy", "PfSense"]
+         },
+         "vignette_skills": {
+            "all": ["IAM", "Automation"],
+            "sysadmin": ["Migration", "Linux"],
+            "ci/cd": ["Automation", "Bash"],
+            "audit": ["Governance", "IAM"]
+         }
       }
    },
    {
       "title": "Junior Analyst",
       "type": "job - internship",
       "img": "editis.png",
+      "desc": "Technical Diagnosis and Financial Rationnalisation of the Direction of Infrastructures",
       "filters": ["audit"],
       "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         Mission of Onepoint at Editis involved conducting a diagnostic for infrastructure management, covering technological, financial, and HR aspects, with a focus on VMWare, HR management savings, and IT governance improvement.
-         <br><br>
-         - Participated in 10 workshops with colleagues<br>
-         - Developed a maturity assessment framework<br>
-         - Team included an expert architect and a business strategy specialist<br>
-         - Analyzed VMWare price increases and potential HR management savings
-         <br><br>
-         <div class="titleA">What I Did</div><br>
-         <div class="titleB">Workshops & Reports</div><br>
-         As a team of three, we collaborated with EDITIS to analyze their structure and determine if its costs were rational compared to its usage. We focused on four key areas: Technology, Human Resources, Finance, and Contracts. To thoroughly cover all topics, we conducted a total of ten workshops, engaging with various stakeholders from both within and outside the IT department.
-         <br><br>
-         Using the notes from the workshops, we created reports to ensure accurate understanding and to document our discussions. This was useful for further analysis and for keeping track of what we agreed to do or needed in the near future. We also created an Excel sheet to track actions that needed to be completed and to index the documents we received, facilitating easy retrieval of information.
-         <br><br><br>
-         <div class="titleB">Maturity Assessment</div><br>
-         Based on the collected data, we conducted a maturity assessment. We organized the information into themes, and for each theme, we evaluated strengths and weaknesses. Using a scale, we assigned scores to each theme, which allowed us to generate graphs and visuals.
-         <br><br><br>
-         <div class="titleB">Recommendations</div><br>
-         Using the maturity assessment, we provided recommendations on how we, as Onepoint, would address areas for improvement if needed (maintaining what is already working well is also a good practice). From this, we outlined potential gains for each recommendation and provided an estimated timeline for implementation if the recommendations were acted upon immediately.
-         `
+         "board": {
+            "objective": "Provide a feedback report and a rationalization on the functioning of EDITIS' IT department.",
+            "stakes": "This report will have a significant impact on EDITIS' strategic decisions regarding IT financial direction, as well as the governance method employed.",
+            "team": ["A senior enterprise architect", "A senior IT consultant for media", "Myself, junior analyst"],
+            "deliverables": ["10 workshops with the client", "An interview between EDITIS' IT department and Onepoint's IT department", "A maturity analysis", "Recommendations on 4 axes (Technological, Human, Financial, and Contractual)"]
+         },
+         "contribution": `
+            <div class="titleC">Data Indexing and Processing</div><br>
+            One of my main tasks was to:<br>
+            - Collect the various data exchanged during the workshops<br>
+            - Index this data for easy retrieval<br>
+            - Classify the data among the 4 main analysis axes and group them by theme<br>
+            <br>
+            <div class="titleC">Maturity Analysis</div><br>
+            With the help of the senior enterprise architect, I was able to:<br>
+            - Define a maturity scale to position a situation on a scale from 0 (immature) to 5 (fully self-managed)<br>
+            - Compare the client's data with the state of the art<br>
+            - Apply the maturity scale to each of the themes discussed<br>
+         `,
+         "skills": {
+            "comp": ["Audit", "FinOps", "Maturity Analysis"]
+         },
+         "vignette_skills": {
+            "all": ["Audit", "FinOps"]
+         }
       }
    },
    {
       "title": "Junior DevSecOps",
       "type": "job - internship",
       "img": "alstom.png",
+      "desc": "Creation of a framework for automatic deployment",
       "filters": ["devsecops", "ci/cd", "sysadmin"],
       "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         Internship at Alstom focused on automating the deployment of CSP (CyberSecurity Provider) modules, involving the exploration of network architecture and the development of a framework for automation scripts.
-         <br><br>
-         - Explored network architecture involving CSP services like Active Directory, PKI, and Radius.<br>
-         - Developed a framework for automation scripts.<br>
-         - Implemented standards within the framework (logging, step-by-step execution).<br>
-         - Generated scripts in Python or PowerShell using the framework.
-         <br><br>
-         <div class="titleA">What I Did</div><br>
-         <div class="titleB">Deployment Automation</div><br>
-         The first task was to automate deployment. CSP provides a manual, hundreds of pages long, detailing how to deploy its modules, whether it's AD, Radius, PKI, or other components. Based on this manual, which specifies all explicit actions, I created Bash and PowerShell scripts to automate the process. This automation covered simple CLI command execution and actions within GUIs. Sometimes, the GUI had a CLI, and when it didn't, we had to contact the developer or reverse-engineer the software to determine how to automate it.
-         <br><br><br>
-         <div class="titleB">Automation Framework Development</div><br>
-         During the deployment automation, we identified three main challenges:<br>
-         - CSP modules change every month or so, requiring regular updates to the automation.<br>
-         - Not all sysadmins have the skills to read and edit code.<br>
-         - The scripts lacked common libraries for regular actions, such as logging.
-         <br><br>
-         To address these issues, I developed a Python framework that converts an English-like language into PowerShell and Python scripts. This framework acts as a compiler of sorts. It uses verbs as function callers; for example, "in some_file.txt write Hello World" would be converted to File.append("some_file.txt", "Hello World") in the scripts. Generally, it follows the syntax "<verb> <param> <verb2> <param2> [...]". The framework includes features for conditions, loops, and variables. It also has a dynamic command library stored in a JSON file, which can be edited by other developers to add more callable functions.
-         <br><br>
-         Overall, the framework includes a normalization system, meaning the script handles console and file logs and operates with a common CLI that manages steps for partial or specific execution. Variables can be edited using a GUI built with Tkinter. This way, a compiled script generates its Python and PowerShell versions, along with data.csv and data.json files for setting up script variables. If a variable is not provided, the script prompts for it at the beginning.<br>
-         Two documentation sets were created: one explaining the framework itself, and another guiding users on how to create and compile scripts, along with an index of all available commands.
-         <br><br>
-         <div class="titleC">Features</div>
-         - OOP script framework allowing a common CLI between scripts<br>
-         - Logging system library and common logging code syntax<br>
-         - Natural-language compilation into Python and PowerShell scripts with accompanying CSV and JSON data sheets<br>
-         - Dynamic JSON dictionary to add new commands in the natural language<br>
-         - GUI to manage data sheets (CSV-JSON conversions, sheet encryption, filling the sheets, with simple features like integration of Ctrl shortcuts)
-         `
+         "board": {
+            "objective": "Automate the integration of the CyberSecurity Platform (CSP).",
+            "stakes": "Automation helps reduce the time required for CSP integration, which is high due to the need to perform it at least once for each client, but also in the product development context to enable testing.",
+            "team": ["A senior DevOps", "Myself, junior DevSecOps"],
+            "deliverables": ["Automation scripts", "Framework for creating standardized scripts without coding knowledge"]
+         },
+         "contribution": `
+            During this internship, I was able to:<br>
+            - Transform manual protocols into Python and PowerShell scripts<br>
+            - Analyze the challenges and highlight them to managers<br>
+            - Propose a tool addressing these challenges, facilitating script maintenance, consolidating automation functions, and standardizing script usage
+         `,
+         "results": `
+            The biggest project was the development of the script creation framework. The objective was twofold: to be able to transform an English text, following a few syntax rules, into a functional script that meets the company's requirements, such as log policies or the ability to execute only certain steps of the script in the desired order.<br>
+            <br>
+            Some additional features were also developed, including secure storage of options, especially passwords, managed in such a way that the script requires no user intervention during execution, moving towards a "double-click and wait" operation.<br>
+            <br>
+            Thus, this tool bridges the gap between developers, who create automation functions, protocol creators, who can generate a script from readable English text using these functions, and operators, who execute the script, input specific options for their use, and then wait.
+         `,
+         "skills": {
+            "comp": ["Integration", "Migration", "Automation"],
+            "dev": ["Python", "Powershell", "Bash"],
+            "tools": [],
+            "softwares": ["Microsoft Server", "Linux"]
+         },
+         "vignette_skills": {
+            "all": ["Integration", "Python"],
+            "sysadmin": ["Linux", "Powershell"],
+            "ci/cd": ["Automation", "Python"],
+            "devsecops": ["Python", "Powershell"]
+         }
       }
    },
    {
       "title": "Building a full Information System",
       "type": "project",
       "img": "master_project.png",
-      "filters": ["devsecops", "ci/cd", "sysadmin", "audit"],
+      "desc": "Design, Deployment and Audit of an Information System hosted on an ESX",
+      "filters": ["ci/cd", "sysadmin", "audit"],
       "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         The "Master Project" is a collaborative project with 8 students during the first year of the Master's program at EFREI Paris. The cybersecurity-focused project was particularly demanding, requiring strong competencies in information systems. We were tasked with delivering a fully integrated information system, including components such as DNS, Web Server, Proxy, Active Directory, and Mail. Additionally, we had to adhere to audit protocols and cybersecurity processes.
-         <br><br>
-         <div class="titleA">What I Did</div><br>
-         <div class="titleB">Design of an Information System</div><br>
-         The first task was designing the information system. It included many features, such as public and private DNS, an AD with its RODC, a PKI, a website, a local webmail server, proxy and reverse proxy, a private file server, an EDR, and an ERP. We created three main zones: a DMZ, a Server zone, and a User zone. Each zone was further subdivided: DMZ-IN (reverse proxy and public DNS), DMZ-OUT (proxy and private DNS), DMZ-INOUT (MDA), DMZ-Technical (RODC); Server-services (web server, MDA, AD), Server-monitor (ERP, EDR), Server-data (File server, log server, and backup server), and Server-Critical (AD, Root CA).
-         <br><br><br>
-         <div class="titleB">Deployment in an ESX</div><br>
-         I personally set up the proxy and reverse proxy, the firewalls with IPS, and the entire DNS system with its records for non-AD related actions and the root CA. Due to time constraints, we could not deploy everything that was requested (and were not expected to do everything). As a result, the ERP, EDR, and backup server were not deployed.<br>
-         The proxy was configured as a Squid transparent proxy, meaning every internal web and DNS request would be routed through it, even if the proxy was not manually configured. The firewall filtered unnecessary packets using a well-constructed network matrix that indexed every destination reachable by a given source. Simple IPS rules were implemented. The DNS managed two domains: one private, managed by the AD and replicated in the DMZ-OUT by a cache DNS that also forwarded other requests to 8.8.8.8, and another public domain with records for accessing the website and mail server, including MX, SPF, and DKIM. Finally, the root CA was added as a trusted CA by the AD and signed the certificates for all TLS communications within the information system.
-         <br><br><br>
-         <div class="titleB">Security Audit</div><br>
-         A part of the project involved auditing our infrastructure by conducting a risk analysis. We used a simple EBIOS RM for this purpose to track potential threats.<br>
-         Additionally, since the project involved multiple teams, it was possible to attempt attacks on other teams or defend against attacks from them or our teachers (following predetermined rules). This served as an effective stress test for our system and others.
-         `
+         "board": {
+            "objective": "Complete a student project testing our skills in designing, integrating, and auditing an enterprise information system.",
+            "stakes": "This project is fundamental for the validation of my master's degree at EFREI.",
+            "team": ["2 other students in Information Systems Cybersecurity and Governance", "2 students in Infrastructure and Software Cybersecurity", "1 student in Cloud Cybersecurity", "Myself, a student in Information Systems Cybersecurity and Governance"],
+            "deliverables": ["Network architecture of the information system", "Deployed information system on an ESX", "Risk analysis of the information system"]
+         },
+         "contribution": `
+            <div class="titleC">Design of the Information System</div>
+            Initially, I actively participated in designing the architecture of the information system, including:<br>
+            - Segmentation into zones, comprising DMZs, server zones, and user zones based on criticalities and uses<br>
+            - Comprehensive definition of the flow matrix<br>
+            <br>
+            <div class="titleC">Service Deployment</div>
+            Next, we needed to deploy the various services, including:<br>
+            - PfSense, applying filters to only allow flows defined in the flow matrix, as well as setting up a VPN and an IDS<br>
+            - The DNS system, comprising two domains (one internal and one external), with the internal replicated in the OUT DMZ (coming from the system) and the external replicated in the IN DMZ (coming from the internet)<br>
+            <br>
+            <div class="titleC">Risk Analysis</div>
+            Finally, we needed to conduct a risk analysis. Along with the two other students in my major, we used the EBIOS method to accomplish this task.
+         `,
+         "skills": {
+            "comp": ["Architecture", "Integration", "Risk Analysis"],
+            "dev": [],
+            "tools": ["Visual Paradigm", "ESX", "EBIOS"],
+            "softwares": ["Microsoft Active Directory", "Bind9 (DNS)", "PKI", "Squid Proxy", "PfSense"]
+         },
+         "vignette_skills": {
+            "all": ["Architecture", "ESX"],
+            "audit": ["Risk Analysis", "EBIOS"]
+         }
       }
    },
    {
       "title": "PenEnv - Bash Pentesting scripts",
       "type": "project",
       "img": "penenv.png",
+      "desc": "Development of an installation tool for a Linux pentesting environement",
       "filters": ["devsecops", "pentesting", "ci/cd"],
       "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         PenEnv is a personal project I created to prepare for the penetration testing certifications I am aiming to pass. Its purpose is to standardize the installation of a penetration testing environment on Linux, primarily through automation. Additionally, it aims to automate certain steps in the penetration testing process.
-         <br><br>
-         It is open-source and available on my GitHub: <a href="https://github.com/lLouu/Penenv" target="_blank">https://github.com/lLouu/Penenv</a>
-         <br><br>
-         <div class="titleA">Features</div><br>
-         - One-liner installer<br>
-         - Installation of 112 penetration testing tools, including development languages, web scanning, brute-force tools, network tools, exploit libraries, reverse shell tools, and analysis and exploit scripts<br>
-         - Custom Bash tool to execute servers by putting their live, uncached input and output streams into readable and editable files, allowing easy management of automated interactions with background tasks<br>
-         - Custom Bash tools to facilitate basic tasks for limited-access reverse shells
-         `
+         "board": {
+            "objective": "Create an installation tool to standardize virtual environments for pentesting.",
+            "stakes": "Facilitate the creation of new pentest virtual environments by reducing installation and configuration bugs.",
+            "deliverables": ["GitHub repository", "One-liner installer", "A script to store the stdin and stdout of a background process in files, facilitating interaction with scripts", "Other scripts to aid pentesting"]
+         },
+         "contribution": `
+            <div class="titleC">Installation Script</div>
+            The goal is to harmonize the various tools to avoid compatibility or installation bugs. All these installations are done in parallel. In this way, a set of over 100 tools, including software, scripts, and programming languages, are installed in 40 minutes using default configurations. Since these tools can take anywhere from 10 minutes to 2 hours to install, the time saved is substantial.
+            <br>
+            <div class="titleC">Enable Interaction Between Background Processes and Scripts</div>
+            One of the main challenges in bash automation is the inability to interact with a background service, such as a server or a continuously running scan tool. To address this, it was necessary to find a way to redirect input (stdin) and output (stdout) to live files.<br>
+            On one hand, for inputs, we needed a way to place a continuously reading process in a pipeline. Since we want the process to remain active, the input must be a constant stream and not stop. Fortunately, with the tail command, it is possible to retrieve new lines from a file.<br>
+            On the other hand, a output file is needed. At first glance, this task seems simple because it is easy to redirect the output of a command to a file in bash. However, this output is placed in a buffer, and as long as this buffer is not full or the command is not finished, the output file is not updated. For this reason, it was necessary to use a command that is not easy to find: "unbuffer".<br>
+            In this way, after extensive research to find this method, it is now possible to launch a background process while interacting with it live through reading and writing to files.
+         `,
+         "skills": {
+            "comp": ["Integration", "Automation", "Parallelization", "Engineering"],
+            "dev": ["Bash"],
+            "tools": [],
+            "softwares": ["Linux"]
+         },
+         "vignette_skills": {
+            "all": ["Automation", "Bash"]
+         }
       }
    },
    {
       "title": "Portfolio",
       "type": "project",
       "img": "portfolio.png",
+      "desc": "Design of a client-side website without usage of frameworks",
       "filters": ["devsecops", "ci/cd"],
       "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         My portfolio is the personal project you are currently viewing. The idea was to create a one-page portfolio that can be hosted on free-tier OVH hosting, which comes with a domain name. This is achieved by using only client-side technologies, including HTML, CSS, and JavaScript. I implemented several features, such as a theme manager, a dynamic content system for easily adding and removing content, a filter, local storage management to maintain consistent theme and filtering choices, and, of course, some frontend design.
-         <br><br>
-         It is open-source and available on my GitHub: <a href="https://github.com/lLouu/Portfolio" target="_blank">https://github.com/lLouu/Portfolio</a>
-         <br><br>
-         <div class="titleA">Features</div><br>
-         - Fully client-side website (HTML, CSS & JS) without the use of frameworks<br>
-         - Light & Dark themes<br>
-         - Dynamic vignette content<br>
-         - Client-side filtering<br>
-         - Custom popups
-         `
+         "board": {
+            "objective": "Create a static portfolio from scratch without a framework, while allowing easy content modification.",
+            "stakes": "Having a portfolio hosted on a server that only accepts FTP connections, meaning a static portfolio, while having advanced filtering and content adaptation capabilities.",
+            "deliverables": ["GitHub repository", "English and French versions"]
+         },
+         "contribution": `
+             <div class="titleC">Site Design</div>
+             To be honest, design is not my strong suit. However, I drew inspiration from designs of other portfolios and created the entire front end in HTML and CSS.<br>
+             I also added a simple light and dark theme system: the colors use CSS variables, allowing the theme to be changed simply by modifying the source CSS of the variables.<br>
+             Finally, I used CSS animations, whether for the looping landing page phrase or for transitions, like the thumbnail filter or theme change.<br>
+             <br>
+             <div class="titleC">Thumbnail System</div>
+             The goal is obviously to list my various projects and make the site adaptable to my future experiences. To achieve this, the thumbnails are created and added via JavaScript from a JSON file.<br>
+             Modifying the JSON directly changes the content of the portfolio, facilitating quick updates.<br>
+             It is possible to filter these thumbnails, which allows adapting the tags associated with the search.<br>
+             <br>
+             <div class="titleC">Responsiveness</div>
+             Finally, I needed to make the site responsive. I used flexbox, but I also had to think of a solution for the thumbnails and popups. Thus, with JavaScript, the site adjusts the number of thumbnails per row (between 1 and 5) and readjusts the position of the popups when the window is resized.<br>
+             <br>
+             <div class="titleC">Session</div>
+             A session system has been implemented to retain the filter and theme chosen by the user. To do this, local and session storage are used.
+           `,
+         "skills": {
+            "comp": ["Web", "Design"],
+            "dev": ["js", "css", "html"],
+            "tools": [],
+            "softwares": []
+         },
+         "vignette_skills": {
+            "all": ["Web", "js"]
+         }
       }
    },
    {
       "title": "EFREI Paris",
       "type": "study",
       "img": "efrei.jpg",
+      "desc": "Study in Cybersecurity for Information Systems and in Governance",
       "filters": ["sysadmin", "devsecops", "audit"],
       "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         I studied in EFREI Paris, a french school in IT, and I did a master in cybersecurity for information system and governance.
-         This means I got to learn many skills, from scripting to doing audit based on ISO methods such as EBIOS RM.
-         `
+         "board": {
+            "objective": "Learn and train to become a cybersecurity engineer capable of meeting technical and governance expectations.",
+            "stakes": "The IT market, especially in cybersecurity, is highly dynamic. It is therefore essential to learn how to stay informed, adapt quickly, and understand the fundamentals not just by heart but in their operation, in order to grasp vulnerabilities and their remedies."
+         },
+         "results": `
+            <div class="titleC">Cybersecurity of Information Systems and Governance</div>
+            My major focuses on cybersecurity of information systems and governance. This is divided into two categories.<br>
+            On one hand, information system security involves knowing:<br>
+            - The security of communication flows and associated cryptography.<br>
+            - Network flow control.<br>
+            - Detection of vulnerabilities or intrusions, and their automated remediation.<br>
+            - Best security practices for information system architecture.<br>
+            - Securing virtualized systems.<br>
+            - Identity Access Management (IAM).<br>
+            <br>
+            On the other hand, governance involves:<br>
+            - Data classification for secure storage and processing compliant with regulations.<br>
+            - ISO 27001, 27003, and 27005 standards.<br>
+            - Risk analysis using EBIOS.<br>
+            - Risk management with Business Continuity Plans (BCP) and Disaster Recovery Plans (DRP).<br>
+            <br>
+            <div class="titleC">Master's Projects</div>
+            During my master's program, three projects were completed, all in teams of six:<br>
+            - The first project was carried out at the end of the third year as part of a "mastercamp," aimed at providing an overview of our future major. The theme for my team's project was to create a tool for sharing confidential documents, with a cryptographic system ensuring that only authorized individuals could access the data in clear text.<br>
+            - The second project took place throughout the second semester of the fourth year under the name "master project," and it was the most challenging of the three. This involved creating an information system, deploying it on ESX, and auditing it. Another vignette in my portfolio goes into more detail.<br>
+            - The last project was completed during the first semester of the final year and involved producing a utility tool. In my case, this project consisted of creating a client application to manage multi-factor authentications using TOTP.<br>
+            <br>
+            <div class="titleC">Internships and International Experience</div>
+            Over the five years, four internships were completed, as well as a semester abroad. The internships help to understand the working world:<br>
+            - In the first year, a worker internship served to discover jobs generally distant from the offices where engineers work, yet impacted by the decisions made in those offices.<br>
+            - In the second year, a sales internship to learn about sales processes and understand how value is delivered.<br>
+            - In the fourth year, a technical internship to challenge our technical skills in a professional environment.<br>
+            - In the fifth year, an engineering internship to challenge us both in terms of technical skills and our capacity for innovation and application of our major expertise.<br>
+            <br>
+            <div class="titleC">From Atoms to Software</div>
+            The first two years of integrated preparatory classes at EFREI focus on understanding how a computer works, starting from atoms to algorithmic functioning. This includes semiconductors, electricity, logic gates, simple electronics design in VHDL, mathematical understanding of binary, and optimizations of binary calculations.<br>
+            <br>
+            <div class="titleC">Communication</div>
+            EFREI is a school where 20% to 25% of the program is dedicated to communication. This includes several aspects:<br>
+            - The ability to express and develop an idea, using storytelling effectively.<br>
+            - The ability to present orally.<br>
+            - English language skills.<br>
+            - Understanding corporate cultures, the notion of soft skills, and CSR initiatives.
+            `,
+         "skills": {
+            "comp": ["Network Security", "Detection & Protection", "Architecture", "IAM", "Data Classification", "ISO 2700X", "Risk Analysis", "Cryptography", "Secure Protocols", "Communication"],
+            "dev": ["Python", "C", "C++", "SQL", "VHDL"],
+            "tools": ["EBIOS", "BCP", "DRP"],
+            "softwares": []
+         },
+         "vignette_skills": {
+            "all": ["Architecture", "EBIOS"],
+            "sysadmin": ["Architecture", "IAM"],
+            "audit": ["EBIOS", "BCP"],
+            "devsecops": ["Python", "C++", "SQL"]
+         }
       }
    },
    {
       "title": "GCP Digital Leader",
       "type": "certification",
       "img": "gcp.png",
+      "desc": "Google Cloud Platform's certification for the GCP products and their use cases",
       "filters": ["sysadmin", "cloud"],
       "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         A Digital Cloud Leader can highlight the features of key Google Cloud products and services,
-         as well as their benefits for businesses. They are also capable of describing common business
-         use cases and explaining how cloud solutions help businesses.
-         `
+         "board": {
+            "objective": "Learn the basics of cloud tools and best practices, as well as the GCP tools available for this purpose.",
+            "stakes": "GCP Google Cloud Digital Leader."
+         },
+         "results": `
+            After taking the exam, I obtained the certification (<a href="https://www.credly.com/badges/a31235b9-4be0-4093-8b6b-09dc0653fcc1/public_url" target="_blank">proof here</a>). In this certification, I learned about:<br>
+            - The usefulness of cloud computing in business.<br>
+            - How data is processed and used.<br>
+            - How AI is implemented.<br>
+            - Methods for migrating to the cloud.<br>
+            - Cloud security.<br>
+            - Scaling and FinOps.
+         `,
+         "skills": {
+            "comp": ["Data Storage", "Cloud AI", "Cloud Migration", "Cloud Security", "FinOps"],
+            "dev": [],
+            "tools": [],
+            "softwares": []
+         },
+         "vignette_skills": {
+            "all": ["Cloud Migration", "FinOps"],
+            "sysadmin": ["Data Storage"]
+         }
       }
    },
    {
       "title": "AWS Solution Architect Associate",
       "type": "study",
       "img": "aws.png",
+      "desc": "AWS's Certification for solution architecture using AWS services (95% of required score)",
       "filters": ["sysadmin", "cloud"],
       "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         An AWS solutions architect develops, implements and maintains digital infrastructure and business applications within the AWS cloud platform. They collaborate with business leaders to learn more about a company's objectives and design effective cloud-based solutions and strategies to fulfill these objectives. Depending on a business's needs, an AWS solutions architect may recommend both software and hardware products for the organization to implement.
-         <br><br>
-         Sadly, I got at the exam 690/1000 when validation was at 720, meaning i'm near the level of the certification.
-         `
+         "board": {
+            "objective": "Learn how to use AWS to create functional, secure, and cost-optimized solutions",
+            "stakes": "AWS Solution Architect Associate"
+         },
+         "results": `
+            Unfortunately, I scored 690/1000 on the exam, while the passing mark was 720. However, this also means I am close to the level required for the certification. I learned the following:<br>
+            - How to use AWS Compute<br>
+            - Manage data on AWS<br>
+            - Organize networks and network security<br>
+            - Manage databases<br>
+            - Create serverless solutions<br>
+            - Use AWS for IAM<br>
+            - Monitor the information system
+         `,
+         "skills": {
+            "comp": ["AWS Compute", "Data Management", "Network Security", "IAM", "Monitoring"],
+            "dev": [],
+            "tools": [],
+            "softwares": []
+         },
+         "vignette_skills": {
+            "all": ["AWS Compute", "IAM"]
+         }
       }
    },
-   {
-      "title": "AZ-104",
-      "type": "study",
-      "img": "azure.png",
-      "filters": ["sysadmin", "cloud"],
-      "content": {
-         "all": `
-         <div class="titleA">Summary</div><br>
-         An Azure AZ-104 administrator is often part of a larger team dedicated to implementing an organization's cloud infrastructure.
-         They also coordinate with other roles to provide networking, security, database, application development, and Azure DevOps solutions.
-         <br><br>
-         Sadly, I got at the exam 674/1000 when validation was at 700, meaning i'm near the level of the certification.
-         `
-      }
-   },
+   // {
+   //    "title": "AZ-104",
+   //    "type": "study",
+   //    "img": "azure.png",
+   //    "desc": "Microsoft's certification on the technical usage of Azure (96% of required score)",
+   //    "filters": ["sysadmin", "cloud"],
+   //    "content": {
+   //       "board": {
+   //          "objective": "O",
+   //          "stakes": "S"
+   //       },
+   //       "results": `
+   //          Sadly, I got at the exam 674/1000 when validation was at 700. However, that also means I am near the level of the certification. I learnt the following :<br>
+   //       `,
+   //       "skills": {
+   //          "comp": [],
+   //          "dev": [],
+   //          "tools": [],
+   //          "softwares": []
+   //       },
+   //       "vignette_skills": {
+   //          "all": [],
+   //          "sysadmin": [],
+   //          "cloud": []
+   //       }
+   //    }
+   // },
    // {
    //    "title": "PNPT",
    //    "type": "study",
@@ -251,6 +431,7 @@ const content = [
       "title": "My Github",
       "type": "account",
       "img": "github.png",
+      "desc": "Repositories of my different projects",
       "filters": ["devsecops", "pentesting", "ci/cd"],
       "links": "https://github.com/lLouu"
    },
@@ -258,6 +439,7 @@ const content = [
       "title": "My Hackthebox",
       "type": "account",
       "img": "hackthebox.png",
+      "desc": "Training place for pentesting",
       "filters": ["pentesting"],
       "links": "https://app.hackthebox.com/profile/1426168"
    },
@@ -265,6 +447,7 @@ const content = [
       "title": "My CodingGame",
       "type": "account",
       "img": "codinggame.jpg",
+      "desc": "Training place for coding",
       "filters": ["devsecops"],
       "links": "https://www.codingame.com/profile/98c9da903a5b276d4cbc503fbe5680da6636135"
    }

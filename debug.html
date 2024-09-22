@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Guerric Le Bihan's portfolio (Dev & Cybersecurity Engineer)">
+   <meta name="description" content="Portfolio de Guerric Le Bihan (Dev & Cybersécurité)">
    <title>Guerric Le Bihan</title>
    <!-- Favicon (generation with realfavicongenerator.net) -->
    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -23,7 +23,7 @@
    <link rel="stylesheet" href="css/common.css"> <!-- Do css job -->
 
    <!-- Js integration -->
-   <script src="js/data.js"></script>
+   <script src="fr files/data.js"></script>
    <script src="js/script.js"></script>
 </head>
 
@@ -36,11 +36,11 @@
                <div id="contact">
                   <a href="mailto:contact@guerriclebihan.com">Email</a>
                   <a href="https://www.linkedin.com/in/guerric-le-bihan" target="_blank">LinkedIn</a>
-                  <a href="CV Guerric Le Bihan 2025.pdf" target="_blank">CV (FR only)</a>
+                  <a href="CV Guerric Le Bihan 2025.pdf" target="_blank">CV</a>
                </div>
             </div>
             <div class="flex column between end"> <!-- Right -->
-               <a href="https://www.guerriclebihan.fr">switch to french</a>
+               <a href="https://www.guerriclebihan.com">passer en anglais</a>
                <a class="flex between" id="theme-button" onclick="changetheme()">
                   <img class="theme-selected" src="img/dark.png" height="16x16">
                   <img src="img/light.png" height="16x16">
@@ -48,34 +48,33 @@
             </div>
          </div>
          <div id="landing">
-            <div id="landing-title">Looking for a <span></span></div>
+            <div id="landing-title">Vous cherchez un <span></span></div>
          </div>
          <div id="about">
-            <div class="important" id="about-title">About Me</div>
+            <div class="important" id="about-title">À propos</div>
             <div id="about-text">
-               I am Guerric Le Bihan, a young cybersecurity engineer.
-               Trained in information systems security and governance, and with experience as a DevSecOps,
-               solution architect, and analyst, I am capable of carrying out tasks related to the maintenance and
-               security
-               of information systems, as well as evaluating their security using ISO 2700X standards and related
-               methods
-               (e.g., EBIOS RM), and implementing remediation measures. I am also able to set up an environment
-               conducive
-               to CI/CD, particularly within a cloud infrastructure.
+               Je suis Guerric Le Bihan, un jeune ingénieur en cybersécurité.
+               Formé en sécurité des systèmes d'information et en gouvernance,
+               et fort d'expériences en tant que DevSecOps, architecte solution et analyste,
+               je suis capable d'effectuer des missions liées à la maintenance et à la sécurisation
+               des systèmes d'information, ainsi qu'à l'évaluation de leur sécurité à l'aide
+               des normes ISO 2700X et des méthodes assimilées (ex. EBIOS RM), et à la mise en œuvre de remédiations.
+               Je suis également apte à mettre en place un environnement propice à la CI/CD, notamment dans le cadre
+               d'une infrastructure cloud.
                <br>
-               I am motivated when the subject requires a low-level understanding of a system, that is,
-               visualizing the different internal interactions, whether for the evaluation of their security or,
-               more broadly, for their design and optimization.
+               Je suis motivé dès que le sujet nécessite une compréhension low-level d'un système,
+               c'est-à-dire la visualisation des différentes interactions internes, que ce soit dans le cadre de
+               l'évaluation de leur sécurité ou, plus largement, pour leur conception et optimisation.
                <br><br>
-               I invite you to learn more about me through the various projects I have completed below.
+               Je vous laisse me découvrir plus en détail via les différents projets que j'ai pu faire ci-dessous.
             </div>
          </div>
          <div class="flex column space" id="content-box">
             <div class="flex column space center" id="menu">
-               <div class="important">My Portfolio</div>
+               <div class="important">Mon Portfolio</div>
                <div id="choices" class="flex column between">
                   <div class="flex just-center">
-                     <a id="all" onclick="changechoice('all')" class="selected">All</a>
+                     <a id="all" onclick="changechoice('all')" class="selected">Tous</a>
                      <a id="ci/cd" onclick="changechoice('ci/cd')">CI/CD</a>
                      <a id="sysadmin" onclick="changechoice('sysadmin')">SysAdmin</a>
                      <a id="cloud" onclick="changechoice('cloud')">Cloud</a>
@@ -89,15 +88,15 @@
             </div>
             <div class="flex column" id="content"></div>
             <div id="infos" class="flex column center">
-               <div id="infos-title" class="important">Did you know ?</div>
+               <div id="infos-title" class="important">Le Saviez-Vous ?</div>
                <div>
-                  This website has been made from scratch without framework, and the overall is client-side. Every
-                  functionalities has been hand-made.<br>
-                  The project is open source and available on Github
+                  Ce site internet a été fait from scratch, sans framework et le tout en client-side. Toutes les
+                  fonctionnalitées ont étées codée à la main.<br>
+                  Le projet est open source et disponible sur Github
                </div>
                <a href="https://github.com/lLouu/Portfolio" target="_blank" class="flex center">
                   <img src="img/github_icon.png" width="24x24">
-                  <div>See the Project</div>
+                  <div>Voir le Projet</div>
                </a>
             </div>
          </div>
@@ -113,7 +112,7 @@
    <div id="popup" class="flex center">
       <div id="popup-container" class="flex column center">
          <div id="popup-bg">
-            <a id="popup-back" onclick="withdraw_popup()">← Back</a>
+            <a id="popup-back" onclick="withdraw_popup()">← Retour</a>
             <div id="popup-content"></div>
          </div>
       </div>
