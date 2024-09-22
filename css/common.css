@@ -305,9 +305,9 @@ a:hover:not(.selected) {
 .skill-box {
    font-size: 0.9em;
    border-radius: 0.75em;
-   border: 1px solid var(--bg-bis);
    padding: 0.05em 10px;
    margin-right: 5px;
+   white-space: nowrap;
    color: beige;
 }
 
@@ -352,6 +352,5 @@ a:hover:not(.selected) {
 
 .titleC {
    font-style: italic;
-   font-weight: bold;
-   color: var(--sub-text);
+   color: var(--important);
 }

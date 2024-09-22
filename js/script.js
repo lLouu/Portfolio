@@ -135,10 +135,11 @@ const createvignette = (title, type, img, skills, desc, ind) => {
    for (let i = 0; i < skills.length; i++) {
       let box_ele = document.createElement('span');
       box_ele.classList = "skill-box";
-      box_ele.innerHTML = skills[i] + ' ';
+      box_ele.innerHTML = skills[i];
       box_ele.style.backgroundColor = "var(--important)";
       box_ele.style.padding = "0.05em 4px"
       skill_ele.appendChild(box_ele);
+      skill_ele.innerHTML += ' ';
    }
    vignette.appendChild(skill_ele);
    let desc_ele = document.createElement('div');
@@ -193,18 +194,18 @@ const gen_popup_html = (obj) => {
    for (let i = 0; i < keys.length; i++) {
       let skills = obj.content.skills[keys[i]];
       for (let j = 0; j < skills.length; j++) {
-         ret += `<span class="skill-box" style="background-color: ${label_color[keys[i]]};">${skills[j]}</span> `
+         ret += `<span class="skill-box" style="background-color: var(--${keys[i]});">${skills[j]}</span> `
       }
    }
    ret += `</div><br>`
 
    ret += `
-      <div class="titleB">${popup_const.board}</div>
+      <div class="titleB">${popup_const.board}</div><br>
       <span class="titleC">${popup_const.objective} :</span> ${obj.content.board.objective}<br>
       <span class="titleC">${popup_const.stakes} :</span> ${obj.content.board.stakes}<br>`
 
    if ("team" in obj.content.board) {
-      ret += `<br><span class="titleC">${popup_const.team} :</span><br>`
+      ret += `<br></div><span class="titleC">${popup_const.team} :</span><br>`
 
       for (let i = 0; i < obj.content.board.team.length; i++) {
          ret += ` - ${obj.content.board.team[i]}<br>`
@@ -212,19 +213,25 @@ const gen_popup_html = (obj) => {
    }
 
    if ("deliverables" in obj.content.board) {
-      ret += `<br><span class="titleC">${popup_const.deliverables} :</span><br>`;
+      ret += `<br></div><span class="titleC">${popup_const.deliverables} :</span><br>`;
 
       for (let i = 0; i < obj.content.board.deliverables.length; i++) {
          ret += ` - ${obj.content.board.deliverables[i]}<br>`
       }
    }
 
-   ret += `
+   if ("contribution" in obj.content) {
+      ret += `
       <br><br><div class="titleB">${popup_const.contribution}</div><br>
       ${obj.content.contribution}
+      `
+   }
+   if ("results" in obj.content) {
+      ret += `
       <br><br><div class="titleB">${popup_const.results}</div><br>
       ${obj.content.results}
-   `
+      `
+   }
 
    return ret;
 }
