@@ -77,13 +77,13 @@ const content = [
             "deliverables": ["10 ateliers d'échanges avec le client", "Une entrevue entre la DSI d'EDITIS et la DSIT de Onepoint", "Une analyse de maturité", "Des recommandations sur 4 axes (Technologique, Humain, Financier et Contractuel)"]
          },
          "contribution": `
-            <div class="titleC">Indexation et traitement des données</div><br>
+            <div class="titleC">Indexation et traitement des données</div>
             L'une de mes tâches principales était de :<br>
             - Récolter les différentes données échangées pendant les ateliers<br>
             - Indexer ces données pour les retrouver facilement<br>
             - Classifier les données parmi les 4 grands axes de l'analyse et les regrouper en thématiques<br>
             <br>
-            <div class="titleC">Analyse de maturité</div><br>
+            <div class="titleC">Analyse de maturité</div>
             Avec l'aide de l'architecte d'entreprise senior, j'ai pu :<br>
             - Définir une échelle de maturité permettant de positionner une situation sur une échelle de 0 (immature) à 5 (complètement auto-géré)<br>
             - Comparer les données du client avec l'état de l'art<br>
@@ -190,7 +190,7 @@ const content = [
          },
          "contribution": `
             <div class="titleC">Script d'installation</div>
-            L'objectif est d'harmoniser les différents outils pour éviter des bugs de compatibilité ou d'installation. Toutes ces installations sont faites en parallèle. De cette manière, un ensemble de plus de 100 outils, qu'il s'agisse de logiciels, de scripts ou de langages de programmation, sont installés en 40 minutes en utilisant les configurations par défaut. Ces outils prenant entre 10 minutes et 2 heures à installer, le temps gagné est considérable.
+            L'objectif est d'harmoniser les différents outils pour éviter des bugs de compatibilité ou d'installation. Toutes ces installations sont faites en parallèle. De cette manière, un ensemble de plus de 100 outils, qu'il s'agisse de logiciels, de scripts ou de langages de programmation, sont installés en 40 minutes en utilisant les configurations par défaut. Ces outils prenant entre 10 minutes et 2 heures à installer, le temps gagné est considérable.<br>
             <br>
             <div class="titleC">Permettre l'interaction entre les processus en arrière-plan et les scripts</div>
             L'une des principales problématiques dans l'automatisation en bash est l'incapacité à interagir avec un service en arrière-plan, comme un serveur ou un outil de scan tournant en continu. Pour remédier à cela, il a été nécessaire de trouver un moyen de rediriger les entrées (stdin) et les sorties (stdout) vers des fichiers en direct.<br>

@@ -77,13 +77,13 @@ const content = [
             "deliverables": ["10 workshops with the client", "An interview between EDITIS' IT department and Onepoint's IT department", "A maturity analysis", "Recommendations on 4 axes (Technological, Human, Financial, and Contractual)"]
          },
          "contribution": `
-            <div class="titleC">Data Indexing and Processing</div><br>
+            <div class="titleC">Data Indexing and Processing</div>
             One of my main tasks was to:<br>
             - Collect the various data exchanged during the workshops<br>
             - Index this data for easy retrieval<br>
             - Classify the data among the 4 main analysis axes and group them by theme<br>
             <br>
-            <div class="titleC">Maturity Analysis</div><br>
+            <div class="titleC">Maturity Analysis</div>
             With the help of the senior enterprise architect, I was able to:<br>
             - Define a maturity scale to position a situation on a scale from 0 (immature) to 5 (fully self-managed)<br>
             - Compare the client's data with the state of the art<br>
@@ -190,7 +190,7 @@ const content = [
          },
          "contribution": `
             <div class="titleC">Installation Script</div>
-            The goal is to harmonize the various tools to avoid compatibility or installation bugs. All these installations are done in parallel. In this way, a set of over 100 tools, including software, scripts, and programming languages, are installed in 40 minutes using default configurations. Since these tools can take anywhere from 10 minutes to 2 hours to install, the time saved is substantial.
+            The goal is to harmonize the various tools to avoid compatibility or installation bugs. All these installations are done in parallel. In this way, a set of over 100 tools, including software, scripts, and programming languages, are installed in 40 minutes using default configurations. Since these tools can take anywhere from 10 minutes to 2 hours to install, the time saved is substantial.<br>
             <br>
             <div class="titleC">Enable Interaction Between Background Processes and Scripts</div>
             One of the main challenges in bash automation is the inability to interact with a background service, such as a server or a continuously running scan tool. To address this, it was necessary to find a way to redirect input (stdin) and output (stdout) to live files.<br>
