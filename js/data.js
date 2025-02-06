@@ -405,17 +405,38 @@ const content = [
    //       }
    //    }
    // },
-   // {
-   //    "title": "PNPT",
-   //    "type": "study",
-   //    "img": "tcm.jpg",
-   //    "filters": ["pentesting"],
-   //    "content": {
-   //       "all": `
-   //       <div class="titleA">Summary</div><br>
-   //       `
-   //    }
-   // },
+   {
+      "title": "PNPT",
+      "type": "certification",
+      "img": "tcm.jpg",
+      "desc": "Penetration testing certification based on a practical lab inspired by real-world scenarios",
+      "filters": ["pentesting", "audit"],
+      "content": {
+         "board": {
+            "objective": "Perform a black box penetration test on a fictional company, find the path to compromise the domain administrator, write a report based on CVSSv3 scores with SP800-53r5 recommendations, and give a 15-minute presentation in English",
+            "stakes": "The Practical Network Penetration Tester (PNPT) certification"
+         },
+         "results": `
+            After passing the exam, I obtained the certification (<a href="https://certified.tcm-sec.com/56115001-e467-4ba4-8d69-2f3e5df779bd#acc.DjCT2SRH" target="_blank"> proof here </a>). Through this certification, I learned about:<br>
+            - Open Source Intelligence (OSINT)<br>
+            - Vulnerabilities due to weak password policies<br>
+            - Vulnerabilities caused by the lack of zero trust implementation<br>
+            - Vulnerabilities due to the absence of IDS/IPS structures or firewalls<br>
+            - Vulnerabilities caused by a lack of updates<br>
+            - Enumeration methods used by attackers<br>
+            - Writing penetration testing reports
+         `,
+         "skills": {
+            "comp": ["IAM", "OSINT", "black box pentest"],
+            "dev": ["Bash"],
+            "tools": ["penenv"],
+            "softwares": []
+         },
+         "vignette_skills": {
+            "all": ["IAM", "OSINT"]
+         }
+      }
+   },
    // {
    //    "title": "ISO 27005/27001",
    //    "type": "study",

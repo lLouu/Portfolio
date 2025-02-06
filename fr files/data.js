@@ -410,17 +410,38 @@ const content = [
    //       }
    //    }
    // },
-   // {
-   //    "title": "PNPT",
-   //    "type": "study",
-   //    "img": "tcm.jpg",
-   //    "filters": ["pentesting"],
-   //    "content": {
-   //       "all": `
-   //       <div class="titleA">Summary</div><br>
-   //       `
-   //    }
-   // },
+   {
+      "title": "PNPT",
+      "type": "certification",
+      "img": "tcm.jpg",
+      "desc": "Certification de test d'intrusion basée sur un lab pratique et inspiré de scénarios réels",
+      "filters": ["pentesting", "audit"],
+      "content": {
+         "board": {
+            "objective": "Faire un test d'intrusion black box d'une entreprise fictive, trouvé le chemin de compromission vers l'administrateur domaine, faire un rapport basé sur des scores CVSSv3 et avec des recommendations du SP800-53r5, et faire une présentation de 15 minutes en anglais",
+            "stakes": "La certification Practical Network Penetration Tester (PNPT)"
+         },
+         "results": `
+            Après avoir passé l'examen, j'ai obtenu la certification (<a href="https://certified.tcm-sec.com/56115001-e467-4ba4-8d69-2f3e5df779bd#acc.DjCT2SRH" target="_blank"> preuve ici </a>). Dans cette certification, j'ai appris à propos de :<br>
+            - L'Open Source Intelligence (OSINT)<br>
+            - Les vulnérabilités dues à une politique de mot de passe faible<br>
+            - Les vulnérabilités dues à la non implémentation du zero trust<br>
+            - Les vulnérabilités dues à la non implémentation de structures d'IDS/IPS, ou de firewall<br>
+            - Les vulnérabilités dues à un manque de mise à jour<br>
+            - Les méthodes d'énumerations utilisées par les attaquants<br>
+            - La rédaction de rapport de pentest
+         `,
+         "skills": {
+            "comp": ["IAM", "OSINT", "pentest black box"],
+            "dev": ["Bash"],
+            "tools": ["penenv"],
+            "softwares": []
+         },
+         "vignette_skills": {
+            "all": ["IAM", "OSINT"]
+         }
+      }
+   },
    // {
    //    "title": "ISO 27005/27001",
    //    "type": "study",
