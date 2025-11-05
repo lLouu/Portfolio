@@ -56,10 +56,10 @@ const content = [
             "softwares": ["Linux", "Keycloak", "Okta", "OpenLDAP", "Squid Proxy", "PfSense"]
          },
          "vignette_skills": {
-            "all": ["IAM", "Automatisation"],
+            "all": ["IAM", "Auto."],
             "sysadmin": ["Migration", "Linux"],
-            "ci/cd": ["Automatisation", "Bash"],
-            "audit": ["Gouvernance", "IAM"]
+            "ci/cd": ["Auto.", "Bash"],
+            "audit": ["Gouv.", "IAM"]
          }
       }
    },
@@ -130,10 +130,9 @@ const content = [
             "softwares": ["Microsoft Server", "Linux"]
          },
          "vignette_skills": {
-            "all": ["Intégration", "Python"],
+            "all": ["Auto.", "Python"],
             "sysadmin": ["Linux", "Powershell"],
-            "ci/cd": ["Automatisation", "Python"],
-            "devsecops": ["Python", "Powershell"]
+            "devsecops": ["Python", "Powersh."]
          }
       }
    },
@@ -171,8 +170,8 @@ const content = [
             "softwares": ["Microsoft Active Directory", "Bind9 (DNS)", "PKI", "Squid Proxy", "PfSense"]
          },
          "vignette_skills": {
-            "all": ["Architecture", "ESX"],
-            "audit": ["RiskAnalysis", "EBIOS"]
+            "all": ["Archi.", "ESX"],
+            "audit": ["EBIOS"]
          }
       }
    },
@@ -205,7 +204,7 @@ const content = [
             "softwares": ["Linux"]
          },
          "vignette_skills": {
-            "all": ["Automatisation", "Bash"]
+            "all": ["Auto.", "Bash"]
          }
       }
    },
@@ -307,8 +306,8 @@ const content = [
             "softwares": []
          },
          "vignette_skills": {
-            "all": ["Architecture", "EBIOS"],
-            "sysadmin": ["Architecture", "IAM"],
+            "all": ["Archi.", "EBIOS"],
+            "sysadmin": ["Archi.", "IAM"],
             "audit": ["EBIOS", "PCA"],
             "devsecops": ["Python", "C++", "SQL"]
          }
@@ -341,7 +340,7 @@ const content = [
             "softwares": []
          },
          "vignette_skills": {
-            "all": ["Move to Cloud", "FinOps"],
+            "all": ["Cloud", "FinOps"],
             "sysadmin": ["Stockage de données"]
          }
       }
@@ -376,7 +375,7 @@ const content = [
             "softwares": []
          },
          "vignette_skills": {
-            "all": ["AWS Compute", "IAM"]
+            "all": ["AWS", "IAM"]
          }
       }
    },

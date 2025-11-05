@@ -136,8 +136,8 @@ const createvignette = (title, type, img, skills, desc, ind) => {
       let box_ele = document.createElement('span');
       box_ele.classList = "skill-box";
       box_ele.innerHTML = skills[i];
-      box_ele.style.backgroundColor = "var(--important)";
-      box_ele.style.padding = "0.05em 4px"
+      // box_ele.style.backgroundColor = "var(--important)";
+      // box_ele.style.padding = "0.05em 4px"
       skill_ele.appendChild(box_ele);
       skill_ele.innerHTML += ' ';
    }

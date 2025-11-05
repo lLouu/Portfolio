@@ -144,6 +144,7 @@ a:hover:not(.selected) {
    height: 100vh;
    background: var(--blur);
    z-index: 2000;
+   backdrop-filter: blur(10px);
 }
 
 #popup-container {
@@ -155,7 +156,7 @@ a:hover:not(.selected) {
    max-height: 90vh;
    background-color: var(--bg);
    border-radius: 7.5px;
-   border: 1px solid var(--bg-bis);
+   border: 1.5px solid var(--bg-bis);
    padding-bottom: 5vh;
    transition: background-color 0.2s linear;
 }
@@ -298,17 +299,19 @@ a:hover:not(.selected) {
 }
 
 .skill-container {
-   line-height: 1.5;
+   line-height: 1.75;
    max-width: 600px;
 }
 
 .skill-box {
    font-size: 0.9em;
-   border-radius: 0.75em;
-   padding: 0.05em 10px;
+   border-radius: 0.25em;
+   padding: 0.25em 10px;
    margin-right: 5px;
+   margin-bottom: 7.5px;
    white-space: nowrap;
    color: beige;
+   background-color: rgba(51, 103, 186, 0.5);
 }
 
 .flex {
