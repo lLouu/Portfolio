@@ -111,7 +111,7 @@ const createvignette = (title, type, img, skills, desc, ind) => {
       content_container.appendChild(new_line);
    }
    let line = content_container.lastChild;
-   let vignette = document.createElement('div');
+   let vignette = document.createElement('a');
    vignette.classList = "vignette flex column between";
    let illustration = document.createElement('img');
    illustration.classList = "illustration";
@@ -146,11 +146,8 @@ const createvignette = (title, type, img, skills, desc, ind) => {
    desc_ele.innerHTML = desc;
    desc_ele.classList = "vignette-desc"
    vignette.appendChild(desc_ele)
-   let see_more = document.createElement('a');
-   see_more.innerHTML = see_more_str;
-   if (type == 'account' || type == 'compte') { see_more.href = content[ind].links; see_more.target = "_blank"; }
-   else { see_more.setAttribute('onclick', `gen_popup("${ind}");`); }
-   vignette.appendChild(see_more);
+   if (type == 'account' || type == 'compte') { vignette.href = content[ind].links; vignette.target = "_blank"; }
+   else { vignette.setAttribute('onclick', `gen_popup("${ind}");`); }
    line.appendChild(vignette);
    n_vignette += 1;
 }
@@ -260,7 +257,15 @@ const gen_popup = (ind) => {
 
 const withdraw_popup = () => {
    document.body.style.overflow = 'auto';
-   document.getElementById("popup").style.display = "none";
+   let popup = document.getElementById("popup");
+   let popupBg = document.getElementById("popup-bg");
+   popupBg.classList.add("closing");
+   popup.style.backgroundColor = "rgba(0,0,0,0)"
+   popupBg.addEventListener("animationend", function handler() {
+      popup.style.display = "none";
+      popupBg.classList.remove("closing");
+      popupBg.removeEventListener("animationend", handler);
+   });
    window.matchMedia("*").removeEventListener('change', popup_change_size);
 }
 
