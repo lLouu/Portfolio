@@ -255,6 +255,7 @@ a:hover:not(.selected) {
    width: 100%;
    background-color: var(--bg-bis);
    padding: 3vh 0;
+   border-top: 1px solid var(--border);
 }
 
 #footer>a>img {
@@ -297,13 +298,14 @@ a:hover:not(.selected) {
    height: 290px;
    background-color: var(--bg-bis);
    border-radius: 12px;
+   border: 1px solid var(--border);
    margin: 10px;
    cursor: pointer
 }
 
 .vignette:hover {
    transform: translateY(-4px);
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 4px 5px var(--shadow);
    transition: all 0.2s ease;
 }
 
