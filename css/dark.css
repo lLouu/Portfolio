@@ -2,7 +2,8 @@
    --inv: rgba(0, 0, 0, 0);
    --blur: rgba(25, 30, 45, 0.7);
    --bg: #121417;
-   --bg-bis: #1D1F25;
+   --bg-bis: #161b22;
+   --bg-hover: #1c222c;
    --border: #181A1F;
    --text: #969AA5;
    --sub-text: #9ea3b5;
@@ -12,5 +13,6 @@
    --dev: #003b08;
    --tools: #000d84;
    --softwares: #852400;
-   --shadow: rgba(255, 255, 255, 0.15);
+   --shadow: rgba(0, 0, 0, 0.25);
+   --shadow-hover: rgba(59, 130, 246, 0.2);
 }
