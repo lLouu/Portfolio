@@ -276,7 +276,7 @@ const roleswitcher = async () => {
       let n = document.createElement('span');
       n.classList.add('scroll');
       n.innerHTML = roles[i];
-      l.removeChild(l.childNodes[1]);
+      l.removeChild(l.childNodes[2]);
       l.appendChild(n);
       i += 1;
       i = i % roles.length;

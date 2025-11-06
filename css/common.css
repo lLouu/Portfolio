@@ -40,12 +40,20 @@ a:hover:not(.selected) {
    margin-right: 10px;
 }
 
+#landing {
+   height: 75vh;
+}
+
 #landing-title {
-   margin-top: 15vh;
-   margin-bottom: 12.5vh;
-   margin-left: 15%;
-   font-size: 1.8rem;
+   text-align: center;
+   font-size: 2.6rem;
    font-weight: bold;
+}
+
+#CTA {
+   text-align: center;
+   padding: 10px;
+   box-shadow: 0 4px 20px var(--important);
 }
 
 .scroll {
@@ -153,7 +161,7 @@ a:hover:not(.selected) {
    padding-top: 2vh;
    padding-bottom: 2vh;
    background-color: var(--bg);
-   border-bottom: 0.2px solid var(--bg-bis);
+   border-bottom: 0.2px solid var(--border);
    transition: background-color 0.2s linear;
 }
 
