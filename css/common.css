@@ -144,6 +144,9 @@ a:hover:not(.selected) {
    height: 100vh;
    background: var(--blur);
    z-index: 2000;
+   backdrop-filter: blur(10px);
+   animation: fadeIn 0.3s ease forwards;
+   transition: all 0.2s linear;
 }
 
 #popup-container {
@@ -155,9 +158,14 @@ a:hover:not(.selected) {
    max-height: 90vh;
    background-color: var(--bg);
    border-radius: 7.5px;
-   border: 1px solid var(--bg-bis);
+   border: 1.5px solid var(--bg-bis);
    padding-bottom: 5vh;
    transition: background-color 0.2s linear;
+   animation: popupUp 0.4s ease forwards;
+}
+
+#popup-bg.closing {
+   animation: popupDown 0.3s ease forwards;
 }
 
 @media (max-width: 700px) {
@@ -183,6 +191,40 @@ a:hover:not(.selected) {
    overflow-y: auto;
    scrollbar-width: thin;
    scrollbar-color: var(--important) rgba(0, 0, 0, 0);
+}
+
+@keyframes popupUp {
+   from {
+      opacity: 0;
+      transform: translateY(15px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes popupDown {
+   from {
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   to {
+      opacity: 0;
+      transform: translateY(15px);
+   }
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
 }
 
 #infos {
@@ -213,6 +255,7 @@ a:hover:not(.selected) {
    width: 100%;
    background-color: var(--bg-bis);
    padding: 3vh 0;
+   border-top: 1px solid var(--border);
 }
 
 #footer>a>img {
@@ -252,10 +295,18 @@ a:hover:not(.selected) {
 
 .vignette {
    width: 150px;
-   height: 315px;
+   height: 290px;
    background-color: var(--bg-bis);
    border-radius: 12px;
+   border: 1px solid var(--border);
    margin: 10px;
+   cursor: pointer
+}
+
+.vignette:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 4px 5px var(--shadow);
+   transition: all 0.2s ease;
 }
 
 .vignette-type {
@@ -272,6 +323,7 @@ a:hover:not(.selected) {
    height: 55px;
    overflow-y: auto;
    scrollbar-width: thin;
+   margin-bottom: 10px;
 }
 
 .vignette>* {
@@ -290,25 +342,20 @@ a:hover:not(.selected) {
    font-weight: bold;
 }
 
-.vignette>a {
-   font-size: 0.8rem;
-   font-weight: bold;
-   color: var(--important);
-   margin-bottom: 10px;
-}
-
 .skill-container {
-   line-height: 1.5;
+   line-height: 1.75;
    max-width: 600px;
 }
 
 .skill-box {
    font-size: 0.9em;
-   border-radius: 0.75em;
-   padding: 0.05em 10px;
+   border-radius: 0.25em;
+   padding: 0.25em 10px;
    margin-right: 5px;
+   margin-bottom: 7.5px;
    white-space: nowrap;
    color: beige;
+   background-color: rgba(51, 103, 186, 0.5);
 }
 
 .flex {
