@@ -1,9 +1,12 @@
+* {
+   transition: background-color 0.2s linear;
+}
+
 body {
    min-height: 100vh;
    background-color: var(--bg);
    color: var(--text);
    font: 1rem "Poppins", sans-serif;
-   transition: background-color 0.2s linear;
 }
 
 html {
@@ -37,12 +40,20 @@ a:hover:not(.selected) {
    margin-right: 10px;
 }
 
+#landing {
+   height: 75vh;
+}
+
 #landing-title {
-   margin-top: 15vh;
-   margin-bottom: 12.5vh;
-   margin-left: 15%;
-   font-size: 1.8rem;
+   text-align: center;
+   font-size: 2.6rem;
    font-weight: bold;
+}
+
+#CTA {
+   text-align: center;
+   padding: 0.75rem;
+   box-shadow: 0 4px 20px var(--important);
 }
 
 .scroll {
@@ -75,22 +86,58 @@ a:hover:not(.selected) {
    }
 }
 
+#about-title {
+   text-align: center;
+   font-size: 2.5rem;
+   font-weight: 700;
+   color: var(--text);
+}
+
+#about-title>span {
+   color: var(--important);
+}
+
+#about-title::after {
+   content: "";
+   display: block;
+   width: 60px;
+   height: 3px;
+   background: var(--important);
+   margin: 10px auto 2rem;
+   border-radius: 4px;
+}
+
+#about-left {
+   margin-right: 3.5%;
+}
+
+#about-stats {
+   margin-top: 2vh;
+   gap: 3.5%;
+}
+
+#about-stats>a {
+   width: 48%;
+   padding: 2vh 0;
+   text-align: center;
+}
+
+#about-stats>a>h4 {
+   color: #22c55e;
+   font-size: 2rem;
+   margin: 0;
+}
+
 #choices>div>a {
    margin-right: 25px;
-   padding-top: 5px;
+   padding-top: 0.5rem;
    font-style: normal;
    height: 25px;
 }
 
-#about,
 #content-box,
 #content {
    margin-top: 7.5vh;
-}
-
-#about {
-   width: 60%;
-   min-width: 265px;
 }
 
 #content {
@@ -98,7 +145,6 @@ a:hover:not(.selected) {
    opacity: 0;
 }
 
-#about-text,
 #choices {
    margin-top: 10px;
 }
@@ -115,7 +161,7 @@ a:hover:not(.selected) {
    padding-top: 2vh;
    padding-bottom: 2vh;
    background-color: var(--bg);
-   border-bottom: 0.2px solid var(--bg-bis);
+   border-bottom: 0.2px solid var(--border);
    transition: background-color 0.2s linear;
 }
 
@@ -159,6 +205,7 @@ a:hover:not(.selected) {
    background-color: var(--bg);
    border-radius: 7.5px;
    border: 1.5px solid var(--bg-bis);
+   box-shadow: 0 4px 20px var(--shadow);
    padding-bottom: 5vh;
    transition: background-color 0.2s linear;
    animation: popupUp 0.4s ease forwards;
@@ -171,6 +218,15 @@ a:hover:not(.selected) {
 @media (max-width: 700px) {
    #popup-bg {
       width: 80%;
+   }
+
+   #about-container {
+      display: block;
+   }
+
+   #about-left {
+      margin-right: 0;
+      margin-bottom: 2vh;
    }
 }
 
@@ -188,6 +244,7 @@ a:hover:not(.selected) {
    left: 5%;
    top: 2vh;
    margin-top: 10px;
+   line-height: 1.6;
    overflow-y: auto;
    scrollbar-width: thin;
    scrollbar-color: var(--important) rgba(0, 0, 0, 0);
@@ -278,8 +335,8 @@ a:hover:not(.selected) {
 
 .selected {
    background-color: var(--important);
-   border-radius: 10px;
-   padding: 0 12.5px 0 12.5px;
+   border-radius: 12px;
+   padding: 0 0.75rem;
    color: var(--bg);
    text-align: center;
    font-weight: bolder;
@@ -293,20 +350,34 @@ a:hover:not(.selected) {
    font-weight: bolder;
 }
 
+.card {
+   background-color: var(--bg-bis);
+   box-shadow: 0 2px 10px var(--shadow);
+   border: 1px solid var(--border);
+   border-radius: 12px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.card:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 4px 20px var(--shadow-hover);
+   background-color: var(--bg-hover);
+}
+
+.about-card {
+   padding: 2rem;
+}
+
+.about-card p {
+   line-height: 1.6;
+   margin-bottom: 1rem;
+}
+
 .vignette {
    width: 150px;
    height: 290px;
-   background-color: var(--bg-bis);
-   border-radius: 12px;
-   border: 1px solid var(--border);
    margin: 10px;
    cursor: pointer
-}
-
-.vignette:hover {
-   transform: translateY(-4px);
-   box-shadow: 0 4px 5px var(--shadow);
-   transition: all 0.2s ease;
 }
 
 .vignette-type {

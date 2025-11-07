@@ -112,7 +112,7 @@ const createvignette = (title, type, img, skills, desc, ind) => {
    }
    let line = content_container.lastChild;
    let vignette = document.createElement('a');
-   vignette.classList = "vignette flex column between";
+   vignette.classList = "vignette card flex column between";
    let illustration = document.createElement('img');
    illustration.classList = "illustration";
    illustration.setAttribute('src', `img/${img}`);
@@ -276,7 +276,7 @@ const roleswitcher = async () => {
       let n = document.createElement('span');
       n.classList.add('scroll');
       n.innerHTML = roles[i];
-      l.removeChild(l.childNodes[1]);
+      l.removeChild(l.childNodes[2]);
       l.appendChild(n);
       i += 1;
       i = i % roles.length;

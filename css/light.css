@@ -3,6 +3,7 @@
    --blur: rgba(250, 250, 250, 0.9);
    --bg: #FCFEFF;
    --bg-bis: #FCFFFF;
+   --bg-hover: #F6F8FB;
    --border: #CAE4FC;
    --text: #000000;
    --sub-text: #525760;
@@ -12,5 +13,6 @@
    --dev: #00710f;
    --tools: #1123c3;
    --softwares: #bc4e26;
-   --shadow: rgba(0, 0, 0, 0.15);
+   --shadow: rgba(201, 201, 201, 0.25);
+   --shadow-hover: rgba(59, 130, 246, 0.2);
 }

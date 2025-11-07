@@ -47,26 +47,64 @@
                </a>
             </div>
          </div>
-         <div id="landing">
-            <div id="landing-title">Vous cherchez un <span></span></div>
+         <div id="landing" class="flex column space">
+            <div id="landing-title">Vous cherchez un <br><span></span></div>
+            <div class="flex just-center"><a id="CTA" class="card"
+                  onclick="document.getElementById('CTA').scrollIntoView({ behavior: 'smooth', block: 'start' }); return false;">Voir
+                  mon travail ↓</a></div>
          </div>
          <div id="about">
-            <div class="important" id="about-title">À propos</div>
-            <div id="about-text">
-               Je suis Guerric Le Bihan, un jeune ingénieur en cybersécurité.
-               Formé en sécurité des systèmes d'information et en gouvernance,
-               et fort d'expériences en tant que DevSecOps, architecte solution et analyste,
-               je suis capable d'effectuer des missions liées à la maintenance et à la sécurisation
-               des systèmes d'information, ainsi qu'à l'évaluation de leur sécurité à l'aide
-               des normes ISO 2700X et des méthodes assimilées (ex. EBIOS RM), et à la mise en œuvre de remédiations.
-               Je suis également apte à mettre en place un environnement propice à la CI/CD, notamment dans le cadre
-               d'une infrastructure cloud.
-               <br>
-               Je suis motivé dès que le sujet nécessite une compréhension low-level d'un système,
-               c'est-à-dire la visualisation des différentes interactions internes, que ce soit dans le cadre de
-               l'évaluation de leur sécurité ou, plus largement, pour leur conception et optimisation.
-               <br><br>
-               Je vous laisse me découvrir plus en détail via les différents projets que j'ai pu faire ci-dessous.
+            <h2 id="about-title">À propos de <span>Moi</span></h2>
+            <div id="about-container" class="flex">
+               <div id="about-left" class="flex">
+                  <div class="about-card card">
+                     <p>
+                        Je suis Guerric Le Bihan, un jeune ingénieur en cybersécurité.
+                        Formé à la sécurité et à la gouvernance des systèmes d'information, et fort d'une expérience en
+                        tant que
+                        DevSecOps, architecte de solutions et analyste.
+                     </p>
+                     <p>
+                        Je suis capable d’effectuer des tâches liées à la maintenance et à la sécurité des systèmes
+                        d'information,
+                        ainsi que d’évaluer leur sécurité à l’aide des normes ISO 2700X et des méthodes associées
+                        (par exemple EBIOS RM), et de mettre en œuvre des mesures correctives.
+                     </p>
+                     <p>
+                        Je suis également capable de mettre en place un environnement propice au CI/CD, notamment au
+                        sein d’une
+                        infrastructure cloud.
+                     </p>
+                  </div>
+               </div>
+
+               <div id="about-right" class="flex column between">
+                  <div class="about-card card">
+                     <span class="titleB">Ce qui me motive</span>
+                     <p>
+                        Je suis motivé lorsque le sujet nécessite une compréhension bas-niveau d’un système,
+                        c’est-à-dire
+                        la visualisation des différentes interactions internes, que ce soit pour l’évaluation de leur
+                        sécurité ou, plus largement, pour leur conception et leur optimisation.
+                     </p>
+                     <p>
+                        Je vous invite à en apprendre davantage sur moi à travers les différents projets que j’ai
+                        réalisés ci-dessous.
+                     </p>
+                  </div>
+                  <div id="about-stats" class="flex space">
+                     <a class="card flex column between"
+                        onclick="document.getElementById('about-stats').scrollIntoView({ behavior: 'smooth', block: 'start' }); return false;">
+                        <h4>1</h4>
+                        <p>Année d’expérience</p>
+                     </a>
+                     <a class="card flex column between"
+                        onclick="document.getElementById('about-stats').scrollIntoView({ behavior: 'smooth', block: 'start' }); return false;">
+                        <h4>10</h4>
+                        <p>Projets et Expériences</p>
+                     </a>
+                  </div>
+               </div>
             </div>
          </div>
          <div class="flex column space" id="content-box">
