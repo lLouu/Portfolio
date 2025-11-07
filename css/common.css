@@ -52,7 +52,7 @@ a:hover:not(.selected) {
 
 #CTA {
    text-align: center;
-   padding: 10px;
+   padding: 0.75rem;
    box-shadow: 0 4px 20px var(--important);
 }
 
@@ -116,13 +116,13 @@ a:hover:not(.selected) {
    gap: 3.5%;
 }
 
-#about-stats>div {
+#about-stats>a {
    width: 48%;
    padding: 2vh 0;
    text-align: center;
 }
 
-#about-stats>div>h4 {
+#about-stats>a>h4 {
    color: #22c55e;
    font-size: 2rem;
    margin: 0;
@@ -130,7 +130,7 @@ a:hover:not(.selected) {
 
 #choices>div>a {
    margin-right: 25px;
-   padding-top: 5px;
+   padding-top: 0.5rem;
    font-style: normal;
    height: 25px;
 }
@@ -205,6 +205,7 @@ a:hover:not(.selected) {
    background-color: var(--bg);
    border-radius: 7.5px;
    border: 1.5px solid var(--bg-bis);
+   box-shadow: 0 4px 20px var(--shadow);
    padding-bottom: 5vh;
    transition: background-color 0.2s linear;
    animation: popupUp 0.4s ease forwards;
@@ -243,6 +244,7 @@ a:hover:not(.selected) {
    left: 5%;
    top: 2vh;
    margin-top: 10px;
+   line-height: 1.6;
    overflow-y: auto;
    scrollbar-width: thin;
    scrollbar-color: var(--important) rgba(0, 0, 0, 0);
@@ -333,8 +335,8 @@ a:hover:not(.selected) {
 
 .selected {
    background-color: var(--important);
-   border-radius: 10px;
-   padding: 0 12.5px 0 12.5px;
+   border-radius: 12px;
+   padding: 0 0.75rem;
    color: var(--bg);
    text-align: center;
    font-weight: bolder;
@@ -356,7 +358,7 @@ a:hover:not(.selected) {
    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+a.card:hover {
    transform: translateY(-4px);
    box-shadow: 0 4px 20px var(--shadow-hover);
    background-color: var(--bg-hover);
@@ -364,7 +366,6 @@ a:hover:not(.selected) {
 
 .about-card {
    padding: 2rem;
-   /*TODO*/
 }
 
 .about-card p {
